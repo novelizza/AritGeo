@@ -13,6 +13,13 @@ export default StyleSheet.create({
     paddingVertical: 25,
     alignItems: 'center',
   },
+  logoContainer: {
+    backgroundColor: Color.CLOUD_COLOR,
+    opacity: 0.79,
+    paddingHorizontal: 10,
+    borderRadius: 10,
+    marginBottom: 15,
+  },
   logo: {
     width: 200,
     height: 200,
@@ -48,7 +55,7 @@ export default StyleSheet.create({
   },
   mascotTXTContainer: {
     height: '100%',
-    justifyContent: 'center',
+    justifyContent: 'flex-end',
     padding: 10,
     alignItems: 'flex-end',
     flex: 1,
@@ -60,5 +67,8 @@ export default StyleSheet.create({
     borderRadius: 4,
     paddingHorizontal: 5,
     fontSize: 16,
+  },
+  mascotSoundContainer: {
+    marginVertical: 20,
   },
 });

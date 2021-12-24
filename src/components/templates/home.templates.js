@@ -6,14 +6,15 @@ import {
   ImageBackground,
   BackHandler,
   Alert,
+  ToastAndroid,
 } from 'react-native';
 import Atoms from '../atoms';
 import Styles from '../../styles';
 import Img from '../../assets';
-import {useNavigation, useRoute} from '@react-navigation/native';
+import {useNavigation} from '@react-navigation/native';
 import Icon from 'react-native-remix-icon';
 import Color from '../../styles/colors';
-import {useDispatch} from 'react-redux';
+import {useDispatch, useSelector} from 'react-redux';
 
 const {HomeStyle} = Styles.Stylesheets;
 
@@ -24,7 +25,7 @@ const {Logo, Mascot, bg} = Img;
 function HomeTemplate(props) {
   const navigation = useNavigation();
   const dispatch = useDispatch();
-  const route = useRoute();
+  const MusicReducer = useSelector(state => state.MusicReducer);
 
   React.useEffect(() => {
     const backAction = () => {
@@ -64,7 +65,9 @@ function HomeTemplate(props) {
   return (
     <View style={HomeStyle.container}>
       <ImageBackground source={bg} resizeMode="cover" style={HomeStyle.bg}>
-        <Image style={HomeStyle.logo} source={Logo} />
+        <View style={HomeStyle.logoContainer}>
+          <Image style={HomeStyle.logo} source={Logo} />
+        </View>
         <View style={HomeStyle.ListButton}>
           <View style={HomeStyle.buttonContainer}>
             <TouchableOpacity
@@ -105,6 +108,30 @@ function HomeTemplate(props) {
           <View style={HomeStyle.mascotTXTContainer}>
             <TextAtoms isi="Belajar mudah ?" styles={HomeStyle.mascotTXT} />
             <TextAtoms isi="AritGeo saja" styles={HomeStyle.mascotTXT} />
+            <TouchableOpacity
+              style={HomeStyle.mascotSoundContainer}
+              onPress={() => {
+                dispatch({
+                  type: 'STARTSTOP_MUSIC',
+                });
+                MusicReducer.isPlay
+                  ? ToastAndroid.show('Sound Tidak Aktif', ToastAndroid.SHORT)
+                  : ToastAndroid.show('Sound Aktif', ToastAndroid.SHORT);
+              }}>
+              {MusicReducer.isPlay ? (
+                <Icon
+                  name="volume-up-fill"
+                  size="40"
+                  color={Color.CLOUD_COLOR}
+                />
+              ) : (
+                <Icon
+                  name="volume-mute-fill"
+                  size="40"
+                  color={Color.CLOUD_COLOR}
+                />
+              )}
+            </TouchableOpacity>
           </View>
           <Image style={HomeStyle.logo} source={Mascot} />
         </View>

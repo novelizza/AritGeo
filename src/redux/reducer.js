@@ -229,6 +229,7 @@ const SoalReducer = (state = initialStateSoal, action) => {
 const initialMusic = {
   uri: '../assets/initialMusic/happy.mp3',
   backSound: '',
+  isPlay: true,
 };
 
 const MusicReducer = (state = initialMusic, action) => {
@@ -249,9 +250,33 @@ const MusicReducer = (state = initialMusic, action) => {
   }
   if (action.type === 'STOP_MUSIC') {
     state.backSound.stop(() => {
-      console.log('disini');
       console.log('Stop');
     });
+  }
+  if (action.type === 'STARTSTOP_MUSIC') {
+    if (state.isPlay) {
+      state.backSound.stop(() => {
+        console.log('Stop');
+      });
+    } else {
+      state.backSound = new Sound(
+        require('../assets/music/happy.mp3'),
+        (error, _sound) => {
+          if (error) {
+            console.log('play');
+            alert('error' + error.message);
+            return;
+          }
+          state.backSound.play(() => {
+            state.backSound.release();
+          });
+        },
+      );
+    }
+    return {
+      ...state,
+      ['isPlay']: !state.isPlay,
+    };
   }
   return state;
 };

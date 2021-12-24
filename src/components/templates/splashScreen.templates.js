@@ -9,7 +9,7 @@ const {SplashScreenStyle} = Styles.Stylesheets;
 
 const {TextAtoms} = Atoms;
 
-const {Logo} = Img;
+const {Logo, uhamka} = Img;
 
 function SplashScreenTemplate() {
   return (
@@ -24,6 +24,7 @@ function SplashScreenTemplate() {
           spinDuration={2000}
         />
         <View style={SplashScreenStyle.textBawahContainer}>
+          <Image style={SplashScreenStyle.uhamkaSize} source={uhamka} />
           <TextAtoms isi="Muhammad Hafidh Ma'ruf" />
           <TextAtoms isi="1701105012" />
         </View>

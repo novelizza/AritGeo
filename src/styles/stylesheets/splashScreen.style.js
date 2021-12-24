@@ -25,5 +25,10 @@ export default StyleSheet.create({
     height: '50%',
     justifyContent: 'flex-end',
     alignItems: 'center',
+    marginTop: 50,
+  },
+  uhamkaSize: {
+    width: 150,
+    height: 125,
   },
 });

@@ -1,5 +1,11 @@
 import React from 'react';
-import {View, TouchableOpacity, ImageBackground, AppState} from 'react-native';
+import {
+  View,
+  TouchableOpacity,
+  ImageBackground,
+  AppState,
+  ToastAndroid,
+} from 'react-native';
 import Atoms from '../atoms';
 import Styles from '../../styles';
 import {useNavigation} from '@react-navigation/native';
@@ -7,6 +13,8 @@ import propTypes from 'prop-types';
 import CheckBox from '@react-native-community/checkbox';
 import {useDispatch, useSelector} from 'react-redux';
 import Sound from 'react-native-sound';
+import Icon from 'react-native-remix-icon';
+import Color from '../../styles/colors';
 
 import Img from '../../assets';
 const {bg} = Img;
@@ -32,6 +40,7 @@ function QuestionsTemplate(props) {
     jawaban3: '',
     jawaban4: '',
   });
+  const [isPlay, setIsPlay] = React.useState(false);
   const appState = React.useRef(AppState.currentState);
   const [appStateVisible, setAppStateVisible] = React.useState(
     appState.current,
@@ -40,6 +49,7 @@ function QuestionsTemplate(props) {
   const dispatch = useDispatch();
   const navigation = useNavigation();
   const data = useSelector(state => state.SoalReducer);
+  const MusicReducer = useSelector(state => state.MusicReducer);
 
   React.useEffect(() => {
     setSoal({
@@ -51,6 +61,7 @@ function QuestionsTemplate(props) {
     });
     if (next === false) {
       var jawaban = data.jawaban[urut];
+      setTemp(jawaban);
       if (jawaban !== undefined) {
         if (jawaban.abc === 1) {
           setToggleCheckBox({
@@ -89,33 +100,59 @@ function QuestionsTemplate(props) {
     }
   }, [urut]);
 
-  React.useEffect(() => {
-    const subscription = AppState.addEventListener('change', nextAppState => {
-      if (
-        appState.current.match(/inactive|background/) &&
-        nextAppState === 'active'
-      ) {
-        console.log('App has come to the foreground!');
-      }
+  // React.useEffect(() => {
+  //   const subscription = AppState.addEventListener('change', nextAppState => {
+  //     if (
+  //       appState.current.match(/inactive|background/) &&
+  //       nextAppState === 'active'
+  //     ) {
+  //       console.log('App has come to the foreground!');
+  //     }
 
-      appState.current = nextAppState;
-      setAppStateVisible(appState.current);
-      console.log('AppState', appState.current);
-    });
+  //     appState.current = nextAppState;
+  //     setAppStateVisible(appState.current);
+  //     console.log('AppState', appState.current);
+  //   });
 
-    return () => {
+  //   return () => {
+  //     console.log('lalu kesini');
+  //     sound.stop(() => {
+  //       console.log('Stop');
+  //       dispatch({
+  //         type: 'PLAY_MUSIC',
+  //       });
+  //     });
+  //     subscription.remove();
+  //   };
+  // }, []);
+
+  // React.useEffect(() => {
+  //   if (appStateVisible === 'active') {
+  //     sound = new Sound(
+  //       require('../../assets/music/solo.mp3'),
+  //       (error, _sound) => {
+  //         if (error) {
+  //           alert('error' + error.message);
+  //           return;
+  //         }
+  //         sound.play(() => {
+  //           sound.release();
+  //         });
+  //       },
+  //     );
+  //   }
+  //   dispatch({
+  //     type: 'STOP_MUSIC',
+  //   });
+  // }, [appStateVisible]);
+
+  function playStopMusic() {
+    if (isPlay) {
       sound.stop(() => {
         console.log('Stop');
-        dispatch({
-          type: 'PLAY_MUSIC',
-        });
       });
-      subscription.remove();
-    };
-  }, []);
-
-  React.useEffect(() => {
-    if (appStateVisible === 'active') {
+      setIsPlay(!isPlay);
+    } else {
       sound = new Sound(
         require('../../assets/music/solo.mp3'),
         (error, _sound) => {
@@ -128,12 +165,11 @@ function QuestionsTemplate(props) {
           });
         },
       );
+      setIsPlay(!isPlay);
     }
-    dispatch({
-      type: 'STOP_MUSIC',
-    });
-  }, [appStateVisible]);
+  }
 
+  console.log(sound);
   return (
     <ImageBackground source={bg} resizeMode="cover" style={QuisStyle.bg}>
       <View style={QuisStyle.questionsContainer}>
@@ -225,7 +261,7 @@ function QuestionsTemplate(props) {
         </View>
         <View style={QuisStyle.bawah}>
           {urut === 0 ? (
-            <View />
+            <View style={{width: 100, height: 45}} />
           ) : (
             <TouchableOpacity
               onPress={() => {
@@ -252,33 +288,54 @@ function QuestionsTemplate(props) {
           )}
           <TouchableOpacity
             onPress={() => {
-              if (data.jawaban[urut] !== undefined) {
-                dispatch({
-                  type: 'UPDATE_JAWABAN',
-                  inputValue: temp,
-                  urutValue: urut,
+              playStopMusic();
+              isPlay
+                ? ToastAndroid.show('Sound Tidak Aktif', ToastAndroid.SHORT)
+                : ToastAndroid.show('Sound Aktif', ToastAndroid.SHORT);
+            }}>
+            {isPlay ? (
+              <Icon name="volume-up-fill" size="40" color={Color.CLOUD_COLOR} />
+            ) : (
+              <Icon
+                name="volume-mute-fill"
+                size="40"
+                color={Color.CLOUD_COLOR}
+              />
+            )}
+          </TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => {
+              if (temp !== '') {
+                if (data.jawaban[urut] !== undefined) {
+                  dispatch({
+                    type: 'UPDATE_JAWABAN',
+                    inputValue: temp,
+                    urutValue: urut,
+                  });
+                } else {
+                  dispatch({
+                    type: 'SET_JAWABAN',
+                    inputValue: temp,
+                  });
+                }
+                setToggleCheckBox({
+                  ...toggleCheckBox,
+                  ['satu']: false,
+                  ['dua']: false,
+                  ['tiga']: false,
+                  ['empat']: false,
                 });
-              } else {
-                dispatch({
-                  type: 'SET_JAWABAN',
-                  inputValue: temp,
-                });
-              }
-              setToggleCheckBox({
-                ...toggleCheckBox,
-                ['satu']: false,
-                ['dua']: false,
-                ['tiga']: false,
-                ['empat']: false,
-              });
 
-              setTemp({});
+                setTemp('');
 
-              if (urut === 4) {
-                navigation.replace('Nilai');
+                if (urut === 4) {
+                  navigation.replace('Nilai');
+                } else {
+                  setUrut(urut + 1);
+                  setNext(true);
+                }
               } else {
-                setUrut(urut + 1);
-                setNext(true);
+                alert('jawaban kosong');
               }
             }}
             style={QuisStyle.buttonNextBack}>
