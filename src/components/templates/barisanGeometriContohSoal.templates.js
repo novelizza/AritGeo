@@ -1,8 +1,10 @@
 import React from 'react';
-import {View, ScrollView, ImageBackground} from 'react-native';
+import {View, ScrollView, ImageBackground,  StyleSheet,} from 'react-native';
 import Atoms from '../atoms';
 import Styles from '../../styles';
 import Img from '../../assets';
+import Color from '../../styles/colors';
+
 const {bg} = Img;
 
 const {BarisanGeometriStyle} = Styles.Stylesheets;
@@ -33,18 +35,46 @@ function BarisanGeometriContohSoalTemplates() {
             isi="27, 9, 3, 1, ..."
             styles={BarisanGeometriStyle.descSpesial}
           />
+           <View style={BarisanGeometriStyle.soalContainer}>
+          <View style={BarisanGeometriStyle.descSpesial3Container}>
+            <TextAtoms
+              isi="• Diketahui:"
+              styles={BarisanGeometriStyle.descSpesial2}
+            />
+            <TextAtoms
+              isi="Suku Pertama = a = 27"
+              styles={BarisanGeometriStyle.descSpesial2}
+            />
+             <TextAtoms
+               isi="Rasio = r = ⁹⁄₂₇ = ¹⁄₃"
+              styles={BarisanGeometriStyle.descSpesial2}
+            />
+          </View>
+          <View style={BarisanGeometriStyle.descSpesial3Container}>
+            <TextAtoms
+              isi="• Ditanyakan:"
+              styles={BarisanGeometriStyle.descSpesial2}
+            />
+            <TextAtoms
+              isi="U₆ ?"
+              styles={BarisanGeometriStyle.descSpesial2}
+            />
+          </View>
+        </View>
+        <View
+          style={[
+            BarisanGeometriStyle.descSpesialContainer,
+            {padding: 5, borderWidth: StyleSheet.hairlineWidth, marginBottom: 20, borderColor: Color.GREEN2_COLOR},
+          ]}>
           <TextAtoms
-            isi="Suku pertama = a =27"
-            styles={BarisanGeometriStyle.descSpesial}
+            isi="• Penyelesaian:"
+            styles={BarisanGeometriStyle.descSpesial2}
           />
-          <TextAtoms
-            isi="Rasio = r = ⁹⁄₂₇ = ¹⁄₃"
-            styles={BarisanGeometriStyle.descSpesial}
-          />
-          <TextAtoms
+           <TextAtoms
             isi="Suku ke-6 = U₆ = ar⁵ = 27 (¹⁄₃)⁵ = ¹⁄₉"
             styles={BarisanGeometriStyle.descSpesial}
           />
+        </View>
         </View>
         <TextAtoms isi="Contoh 2 :" styles={BarisanGeometriStyle.judul} />
         <TextAtoms
@@ -52,18 +82,45 @@ function BarisanGeometriContohSoalTemplates() {
           styles={BarisanGeometriStyle.desc}
         />
         <TextAtoms isi="Jawab :" styles={BarisanGeometriStyle.desc} />
-        <View style={BarisanGeometriStyle.descSpesialContainer}>
+        <View style={BarisanGeometriStyle.soalContainer}>
+          <View style={BarisanGeometriStyle.descSpesial3Container}>
+            <TextAtoms
+              isi="• Diketahui:"
+              styles={BarisanGeometriStyle.descSpesial2}
+            />
+            <TextAtoms
+              isi="a=2 r=4 ÷ 2=2 n=20"
+              styles={BarisanGeometriStyle.descSpesial2}
+            />
+            
+          </View>
+          <View style={BarisanGeometriStyle.descSpesial3Container}>
+            <TextAtoms
+              isi="• Ditanyakan:"
+              styles={BarisanGeometriStyle.descSpesial2}
+            />
+            <TextAtoms
+              isi="S₂₀ ?"
+              styles={BarisanGeometriStyle.descSpesial2}
+            />
+          </View>
+        </View>
+        <View
+          style={[
+            BarisanGeometriStyle.descSpesialContainer,
+            {padding: 5, borderWidth: StyleSheet.hairlineWidth, marginBottom: 20, borderColor: Color.GREEN2_COLOR},
+          ]}>
           <TextAtoms
-            isi="a=2 r=4 ÷ 2=2 n=20"
-            styles={BarisanGeometriStyle.descSpesial}
+            isi="• Penyelesaian:"
+            styles={BarisanGeometriStyle.descSpesial2}
           />
-          <View
+           <View
             style={[
               BarisanGeometriStyle.descSpesial2Container,
-              {justifyContent: 'center'},
+              {marginTop: 5},
             ]}>
             <TextAtoms
-              isi="S20 = "
+              isi="S₂₀ = "
               styles={[BarisanGeometriStyle.descSpesial, {alignSelf: 'center'}]}
             />
             <View>
@@ -132,23 +189,40 @@ function BarisanGeometriContohSoalTemplates() {
           styles={BarisanGeometriStyle.desc}
         />
         <TextAtoms isi="Jawab :" styles={BarisanGeometriStyle.desc} />
-        <View style={BarisanGeometriStyle.descSpesialContainer}>
+        <View style={BarisanGeometriStyle.soalContainer}>
+          <View style={BarisanGeometriStyle.descSpesial3Container}>
+            <TextAtoms
+              isi="• Diketahui:"
+              styles={BarisanGeometriStyle.descSpesial2}
+            />
+            <TextAtoms
+              isi="a = 150 dan U₄=4050"
+              styles={BarisanGeometriStyle.descSpesial2}
+            />
+          </View>
+          <View style={BarisanGeometriStyle.descSpesial3Container}>
+            <TextAtoms
+              isi="• Ditanyakan:"
+              styles={BarisanGeometriStyle.descSpesial2}
+            />
+            <TextAtoms
+              isi="Hasil Produksi Selama 5 Bulan (S₅) ?"
+              styles={BarisanGeometriStyle.descSpesial2}
+            />
+          </View>
+        </View>
+        <View
+          style={[
+            BarisanGeometriStyle.descSpesialContainer,
+            {padding: 10, borderWidth: StyleSheet.hairlineWidth, marginBottom: 20, borderColor: Color.GREEN2_COLOR},
+          ]}>
           <TextAtoms
-            isi="• Diketahui : a = 150 dan U₄=4050"
-            styles={BarisanGeometriStyle.descSpesial}
+            isi="• Penyelesaian:"
+            styles={BarisanGeometriStyle.descSpesial2}
           />
-          <TextAtoms
-            isi="• Ditanyakan : Hasil Produksi selama 5 bulan (S₅)"
-            styles={BarisanGeometriStyle.descSpesial}
-          />
-          <TextAtoms
-            isi="• Penyelesaian :"
-            styles={BarisanGeometriStyle.descSpesial}
-          />
-          <TextAtoms isi=" " styles={BarisanGeometriStyle.descSpesial} />
-          <TextAtoms
+           <TextAtoms
             isi="U₄⁄U₁ = ⁴⁰⁵⁰⁄₁₅₀"
-            styles={BarisanGeometriStyle.descSpesial}
+            styles={[BarisanGeometriStyle.descSpesial, {marginTop: 5}]}
           />
           <TextAtoms
             isi="ar³⁄ₐ = 27"
@@ -175,11 +249,12 @@ function BarisanGeometriContohSoalTemplates() {
             isi="S₅ = 75 x 242 = 18150"
             styles={BarisanGeometriStyle.descSpesial}
           />
-        </View>
-        <TextAtoms
+          <TextAtoms
           isi="Jadi, hasil produksi selama 5 bulan adalah 18.150 unit kerajinan."
           styles={BarisanGeometriStyle.desc}
         />
+        </View>
+        
       </ScrollView>
     </ImageBackground>
   );

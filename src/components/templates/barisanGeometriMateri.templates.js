@@ -11,7 +11,7 @@ const {BarisanGeometriStyle} = Styles.Stylesheets;
 
 const {TextAtoms} = Atoms;
 
-function BarisanGeometriTemplates() {
+function BarisanGeometriMateriTemplates() {
   // const appState = React.useRef(AppState.currentState);
   // const [appStateVisible, setAppStateVisible] = React.useState(
   //   appState.current,
@@ -69,11 +69,19 @@ function BarisanGeometriTemplates() {
           styles={BarisanGeometriStyle.judul}
         />
         <TextAtoms
-          isi="# Barisan Geometri #                                          "
-          styles={BarisanGeometriStyle.desc2}
+          isi="Tujuan Pembelajaran Barisan Aritmatika adalah"
+          styles={[BarisanGeometriStyle.descSpesial, {marginHorizontal: 10, marginTop: 10}]}
         />
         <TextAtoms
-          isi="1. Rasio"
+          isi="1. Menentukan rasio barisan geometri"
+          styles={[BarisanGeometriStyle.descSpesial, {marginLeft: 10}]}
+        />
+        <TextAtoms
+          isi="2. Menentukan suku ke-n barisan geometri"
+          styles={[BarisanGeometriStyle.descSpesial, {marginLeft: 10}]}
+        />
+        <TextAtoms
+          isi="Barisan Geometri (BG) adalah bagian yang memiliki perbandingan (rasio = r) dua suku berurutan tetap."
           styles={BarisanGeometriStyle.desc}
         />
          <View style={BarisanGeometriStyle.kotakRumus}>
@@ -104,26 +112,30 @@ function BarisanGeometriTemplates() {
         </View>
         
         <TextAtoms
-          isi="Keterangan :"
+          isi="Contoh Barisan Geometri :"
           styles={BarisanGeometriStyle.desc}
         />
         <View style={BarisanGeometriStyle.descSpesialContainer}>
           <TextAtoms
-            isi="r = rasio"
-            styles={BarisanGeometriStyle.descSpesial}
-          />
-          <TextAtoms
-            isi="Uₙ = Suku ke - n"
-            styles={BarisanGeometriStyle.descSpesial}
+            isi="5, 25, 125, ..."
+            styles={[BarisanGeometriStyle.descSpesial, {alignSelf: 'center'}]}
           />
         </View>
         <TextAtoms
-          isi="2. Rumus Suku ke-n"
+          isi="Carilah barisan ke 4."
+          styles={BarisanGeometriStyle.desc}
+        />
+        <TextAtoms
+          isi="Kita ketahui barisan aritmatika ini menggunakan rumus Uₙ = 5ⁿ. Maka baris ke-4 adalah 5⁴ = 625."
+          styles={[BarisanGeometriStyle.descSpesial, {marginHorizontal: 10}]}
+        />
+        <TextAtoms
+          isi="1. Rumus Suku ke-n"
           styles={BarisanGeometriStyle.desc}
         />      
         <View style={BarisanGeometriStyle.kotakRumus}>
         <TextAtoms
-          isi="Uₙ = arⁿ⁻¹"
+          isi="Un = arⁿ⁻¹"
           styles={[BarisanGeometriStyle.descRumus, {alignSelf: 'center'}]}
         />
         </View>
@@ -137,7 +149,7 @@ function BarisanGeometriTemplates() {
               styles={BarisanGeometriStyle.descSpesial}
             />
             <TextAtoms
-              isi="• ₙ = 1, 2, 3, ..."
+              isi="• n = 1, 2, 3, ..."
               styles={BarisanGeometriStyle.descSpesial}
             />
             <TextAtoms
@@ -150,10 +162,26 @@ function BarisanGeometriTemplates() {
             />
           </View>
           <TextAtoms
-          isi="3. Deret Geometri"
+          isi="2. Deret Geometri"
           styles={BarisanGeometriStyle.desc}
         />
-        <View style={BarisanGeometriStyle.kotakRumus3}>
+        <TextAtoms
+          isi="Deret Geometri (DG), yaitu jumlah n suku pertama dari BG"
+          styles={[BarisanGeometriStyle.descSpesial, {marginHorizontal: 10}]}
+        />
+        <TextAtoms
+          isi="BG → U₁ , U₂, U₃, ..., Uₙ"
+          styles={[BarisanGeometriStyle.descSpesial, {alignSelf: 'center'}]}
+        />
+        <TextAtoms
+          isi="DG → U₁ + U₂ + U₃ + ... + Uₙ"
+          styles={[BarisanGeometriStyle.descSpesial, {alignSelf: 'center'}]}
+        />
+        <TextAtoms
+          isi="Rumus deret Geometri :"
+          styles={BarisanGeometriStyle.desc}
+        />
+        <View style={BarisanGeometriStyle.kotakRumus2}>
         <TextAtoms
           isi="Sn ="
           styles={[BarisanGeometriStyle.descRumus, {alignSelf: 'center'}]}
@@ -203,32 +231,6 @@ function BarisanGeometriTemplates() {
           </View>
           </View>
         </View>
-        <TextAtoms
-          isi="Keterangan :"
-          styles={BarisanGeometriStyle.desc}
-        />
-        <View style={BarisanGeometriStyle.descSpesial3Wrap}>
-            <TextAtoms
-              isi="• Sn = jumlah suku n pertama"
-              styles={BarisanGeometriStyle.descSpesial}
-            />
-            <TextAtoms
-              isi="• Uₙ = suku ke n"
-              styles={BarisanGeometriStyle.descSpesial}
-            />
-            <TextAtoms
-              isi="• a = suku ke-1"
-              styles={BarisanGeometriStyle.descSpesial}
-            />
-            <TextAtoms
-              isi="• b = beda"
-              styles={BarisanGeometriStyle.descSpesial}
-            />
-            <TextAtoms
-              isi="• n = 1,2,3,4,..."
-              styles={BarisanGeometriStyle.descSpesial}
-            />
-          </View>
         {/* <TextAtoms isi="Barisan Geometri" styles={BarisanGeometriStyle.judul} />
         <TextAtoms
           isi="Barisan Geometri (BG) adalah bagian yang memiliki perbandingan (rasio = r) dua suku berurutan tetap."
@@ -532,4 +534,4 @@ function BarisanGeometriTemplates() {
   );
 }
 
-export default BarisanGeometriTemplates;
+export default BarisanGeometriMateriTemplates;

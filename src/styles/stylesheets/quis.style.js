@@ -75,11 +75,11 @@ export default StyleSheet.create({
     alignSelf: 'center',
     fontWeight: 'bold',
     fontSize: 50,
-    color: Color.BLACK_COLOR,
+    color: Color.GREEN2_COLOR,
   },
   questionsSoal: {
     fontSize: 20,
-    color: Color.BLACK_COLOR,
+    color: Color.GREEN2_COLOR,
     marginTop: 25,
     marginBottom: 10,
   },
@@ -92,7 +92,7 @@ export default StyleSheet.create({
   jawabanTXT: {
     flex: 1,
     fontWeight: 'bold',
-    color: Color.BLACK_COLOR,
+    color: Color.GREEN2_COLOR,
     fontSize: 16,
   },
   bawah: {

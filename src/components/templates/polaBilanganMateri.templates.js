@@ -8,9 +8,9 @@ import Img from '../../assets';
 const {PolaBilanganStyle} = Styles.Stylesheets;
 
 const {TextAtoms} = Atoms;
-const {bg, panah} = Img;
+const {bg, panah, segitigadua, segitigatiga} = Img;
 
-function PolaBilanganTemplate() {
+function PolaBilanganMateriTemplate() {
   // const appState = React.useRef(AppState.currentState);
   // const [appStateVisible, setAppStateVisible] = React.useState(
   //   appState.current,
@@ -68,12 +68,16 @@ function PolaBilanganTemplate() {
           isi="Pola Bilangan"
           styles={[PolaBilanganStyle.judul, {marginTop: 10}]}
         />
-        {/* <TextAtoms
-          isi="Pola bilangan adalah aturan yang menentukan suatu barisan bilangan. Aturan dinamakan rumus suku ke-n dilambangkan dengan Un."
-          styles={PolaBilanganStyle.desc}
-        /> */}
         <TextAtoms
-          isi="# Pola Bilangan #"
+          isi="Tujuan Pembelajaran dari Pola bilangan adalah Peserta didik mampu menghitung suku selanjutnya dari suatu pola barisan bilangan dengan tepat dan perserta didik mampu menentukan suku selanjutnya dari suatu barisan bilangan dengan cara menggenerelisasikan pola bilangan sebelumnya dengan benar."
+          styles={PolaBilanganStyle.desc}
+        />
+        <TextAtoms
+          isi="Pola bilangan adalah aturan yang menentukan suatu barisan bilangan. Aturan dinamakan rumus suku ke-n dilambangkan dengan Uₙ."
+          styles={PolaBilanganStyle.desc}
+        />
+        <TextAtoms
+          isi="Contoh Pola dan Barisan Bilangan :"
           styles={PolaBilanganStyle.desc}
         />
         <TextAtoms
@@ -113,7 +117,30 @@ function PolaBilanganTemplate() {
           </View>
         </View>
         <TextAtoms
-          isi="2. Barisan Bilangan Genap → Uₙ = 2n :"
+          isi="Berdasarkan Gambar diatas Pola ke-7 adalah..."
+          styles={PolaBilanganStyle.desc}
+        />
+        <View style={PolaBilanganStyle.nodeContainer2}>
+          <View style={PolaBilanganStyle.nodeWrapContainer}>
+            <View style={PolaBilanganStyle.nodeWrap}>
+              <View style={PolaBilanganStyle.node} />
+              <View style={PolaBilanganStyle.node} />
+              <View style={PolaBilanganStyle.node} />
+              <View style={PolaBilanganStyle.node} />
+              <View style={PolaBilanganStyle.node} />
+              <View style={PolaBilanganStyle.node} />
+              <View style={PolaBilanganStyle.node} />
+
+            </View>
+            <TextAtoms isi="7" styles={PolaBilanganStyle.desc} />
+          </View>
+        </View>
+        <TextAtoms
+          isi="Karena rumusnya adalah Uₙ = n"
+          styles={PolaBilanganStyle.desc}
+        />
+        <TextAtoms
+          isi="2. Barisan Bilangan Genap"
           styles={PolaBilanganStyle.desc}
         />
         <View style={PolaBilanganStyle.nodeContainer}>
@@ -142,285 +169,6 @@ function PolaBilanganTemplate() {
               <View style={PolaBilanganStyle.node} />
               <View style={PolaBilanganStyle.node} />
               <View style={PolaBilanganStyle.node} />
-            </View>
-            <View style={PolaBilanganStyle.nodeWrap}>
-              <View style={PolaBilanganStyle.node} />
-              <View style={PolaBilanganStyle.node} />
-              <View style={PolaBilanganStyle.node} />
-            </View>
-            <TextAtoms isi="6," styles={PolaBilanganStyle.desc} />
-          </View>
-          <View style={PolaBilanganStyle.nodeWrapContainer}>
-            <View style={PolaBilanganStyle.nodeWrap}>
-              <View style={PolaBilanganStyle.node} />
-              <View style={PolaBilanganStyle.node} />
-              <View style={PolaBilanganStyle.node} />
-              <View style={PolaBilanganStyle.node} />
-            </View>
-            <View style={PolaBilanganStyle.nodeWrap}>
-              <View style={PolaBilanganStyle.node} />
-              <View style={PolaBilanganStyle.node} />
-              <View style={PolaBilanganStyle.node} />
-              <View style={PolaBilanganStyle.node} />
-            </View>
-            <TextAtoms isi="8,..." styles={PolaBilanganStyle.desc} />
-          </View>
-        </View>
-        <TextAtoms
-          isi="3. Barisan Bilangan Ganjil → Uₙ = 2n – 1 :"
-          styles={PolaBilanganStyle.desc}
-        />
-        <View style={PolaBilanganStyle.nodeContainer}>
-          <View style={PolaBilanganStyle.nodeWrapContainer}>
-            <View style={PolaBilanganStyle.nodeWrap}>
-              <View style={PolaBilanganStyle.nodeNotActive} />
-            </View>
-            <View style={PolaBilanganStyle.nodeWrap}>
-              <View style={PolaBilanganStyle.nodeNotActive} />
-            </View>
-            <View style={PolaBilanganStyle.nodeWrap}>
-              <View style={PolaBilanganStyle.nodeNotActive} />
-            </View>
-            <View style={PolaBilanganStyle.nodeWrap}>
-              <View style={PolaBilanganStyle.node} />
-            </View>
-            <TextAtoms isi="1," styles={PolaBilanganStyle.desc} />
-          </View>
-          <View style={PolaBilanganStyle.nodeWrapContainer}>
-            <View style={PolaBilanganStyle.nodeWrap}>
-              <View style={PolaBilanganStyle.nodeNotActive} />
-              <View style={PolaBilanganStyle.nodeNotActive} />
-            </View>
-            <View style={PolaBilanganStyle.nodeWrap}>
-              <View style={PolaBilanganStyle.nodeNotActive} />
-              <View style={PolaBilanganStyle.nodeNotActive} />
-            </View>
-            <View style={PolaBilanganStyle.nodeWrap}>
-              <View style={PolaBilanganStyle.node} />
-              <View style={PolaBilanganStyle.nodeNotActive} />
-            </View>
-            <View style={PolaBilanganStyle.nodeWrap}>
-              <View style={PolaBilanganStyle.node} />
-              <View style={PolaBilanganStyle.node} />
-            </View>
-            <TextAtoms isi="3," styles={PolaBilanganStyle.desc} />
-          </View>
-          <View style={PolaBilanganStyle.nodeWrapContainer}>
-            <View style={PolaBilanganStyle.nodeWrap}>
-              <View style={PolaBilanganStyle.nodeNotActive} />
-              <View style={PolaBilanganStyle.nodeNotActive} />
-              <View style={PolaBilanganStyle.nodeNotActive} />
-            </View>
-            <View style={PolaBilanganStyle.nodeWrap}>
-              <View style={PolaBilanganStyle.node} />
-              <View style={PolaBilanganStyle.nodeNotActive} />
-              <View style={PolaBilanganStyle.nodeNotActive} />
-            </View>
-            <View style={PolaBilanganStyle.nodeWrap}>
-              <View style={PolaBilanganStyle.node} />
-              <View style={PolaBilanganStyle.nodeNotActive} />
-              <View style={PolaBilanganStyle.nodeNotActive} />
-            </View>
-            <View style={PolaBilanganStyle.nodeWrap}>
-              <View style={PolaBilanganStyle.node} />
-              <View style={PolaBilanganStyle.node} />
-              <View style={PolaBilanganStyle.node} />
-            </View>
-            <TextAtoms isi="5," styles={PolaBilanganStyle.desc} />
-          </View>
-        </View>
-        <TextAtoms
-          isi="4. Barisan Bilangan Persegi → Uₙ = n² :"
-          styles={PolaBilanganStyle.desc}
-        />
-        <View style={PolaBilanganStyle.nodeContainer}>
-          <View style={PolaBilanganStyle.nodeWrapContainer}>
-            <View style={PolaBilanganStyle.nodeWrap}>
-              <View style={PolaBilanganStyle.nodeNotActive} />
-            </View>
-            <View style={PolaBilanganStyle.nodeWrap}>
-              <View style={PolaBilanganStyle.nodeNotActive} />
-            </View>
-            <View style={PolaBilanganStyle.nodeWrap}>
-              <View style={PolaBilanganStyle.nodeNotActive} />
-            </View>
-            <View style={PolaBilanganStyle.nodeWrap}>
-              <View style={PolaBilanganStyle.node} />
-            </View>
-            <TextAtoms isi="1," styles={PolaBilanganStyle.desc} />
-          </View>
-          <View style={PolaBilanganStyle.nodeWrapContainer}>
-            <View style={PolaBilanganStyle.nodeWrap}>
-              <View style={PolaBilanganStyle.nodeNotActive} />
-              <View style={PolaBilanganStyle.nodeNotActive} />
-            </View>
-            <View style={PolaBilanganStyle.nodeWrap}>
-              <View style={PolaBilanganStyle.nodeNotActive} />
-              <View style={PolaBilanganStyle.nodeNotActive} />
-            </View>
-            <View style={PolaBilanganStyle.nodeWrap}>
-              <View style={PolaBilanganStyle.node} />
-              <View style={PolaBilanganStyle.node} />
-            </View>
-            <View style={PolaBilanganStyle.nodeWrap}>
-              <View style={PolaBilanganStyle.node} />
-              <View style={PolaBilanganStyle.node} />
-            </View>
-            <TextAtoms isi="4," styles={PolaBilanganStyle.desc} />
-          </View>
-          <View style={PolaBilanganStyle.nodeWrapContainer}>
-            <View style={PolaBilanganStyle.nodeWrap}>
-              <View style={PolaBilanganStyle.nodeNotActive} />
-              <View style={PolaBilanganStyle.nodeNotActive} />
-              <View style={PolaBilanganStyle.nodeNotActive} />
-            </View>
-            <View style={PolaBilanganStyle.nodeWrap}>
-              <View style={PolaBilanganStyle.node} />
-              <View style={PolaBilanganStyle.node} />
-              <View style={PolaBilanganStyle.node} />
-            </View>
-            <View style={PolaBilanganStyle.nodeWrap}>
-              <View style={PolaBilanganStyle.node} />
-              <View style={PolaBilanganStyle.node} />
-              <View style={PolaBilanganStyle.node} />
-            </View>
-            <View style={PolaBilanganStyle.nodeWrap}>
-              <View style={PolaBilanganStyle.node} />
-              <View style={PolaBilanganStyle.node} />
-              <View style={PolaBilanganStyle.node} />
-            </View>
-            <TextAtoms isi="9," styles={PolaBilanganStyle.desc} />
-          </View>
-        </View>
-        <TextAtoms
-          isi="5. Barisan Bilangan Persegi Panjang → Uₙ = n ( n + 1 ) :"
-          styles={PolaBilanganStyle.desc}
-        />
-        <View style={PolaBilanganStyle.nodeContainer}>
-          <View style={PolaBilanganStyle.nodeWrapContainer}>
-            <View style={PolaBilanganStyle.nodeWrap}>
-              <View style={PolaBilanganStyle.nodeNotActive} />
-            </View>
-            <View style={PolaBilanganStyle.nodeWrap}>
-              <View style={PolaBilanganStyle.nodeNotActive} />
-            </View>
-            <View style={PolaBilanganStyle.nodeWrap}>
-              <View style={PolaBilanganStyle.nodeNotActive} />
-            </View>
-            <View style={PolaBilanganStyle.nodeWrap}>
-              <View style={PolaBilanganStyle.node} />
-            </View>
-            <View style={PolaBilanganStyle.nodeWrap}>
-              <View style={PolaBilanganStyle.node} />
-            </View>
-            <TextAtoms isi="2," styles={PolaBilanganStyle.desc} />
-          </View>
-          <View style={PolaBilanganStyle.nodeWrapContainer}>
-            <View style={PolaBilanganStyle.nodeWrap}>
-              <View style={PolaBilanganStyle.nodeNotActive} />
-              <View style={PolaBilanganStyle.nodeNotActive} />
-            </View>
-            <View style={PolaBilanganStyle.nodeWrap}>
-              <View style={PolaBilanganStyle.nodeNotActive} />
-              <View style={PolaBilanganStyle.nodeNotActive} />
-            </View>
-            <View style={PolaBilanganStyle.nodeWrap}>
-              <View style={PolaBilanganStyle.node} />
-              <View style={PolaBilanganStyle.node} />
-            </View>
-            <View style={PolaBilanganStyle.nodeWrap}>
-              <View style={PolaBilanganStyle.node} />
-              <View style={PolaBilanganStyle.node} />
-            </View>
-            <View style={PolaBilanganStyle.nodeWrap}>
-              <View style={PolaBilanganStyle.node} />
-              <View style={PolaBilanganStyle.node} />
-            </View>
-            <TextAtoms isi="6," styles={PolaBilanganStyle.desc} />
-          </View>
-          <View style={PolaBilanganStyle.nodeWrapContainer}>
-            <View style={PolaBilanganStyle.nodeWrap}>
-              <View style={PolaBilanganStyle.nodeNotActive} />
-              <View style={PolaBilanganStyle.nodeNotActive} />
-              <View style={PolaBilanganStyle.nodeNotActive} />
-            </View>
-            <View style={PolaBilanganStyle.nodeWrap}>
-              <View style={PolaBilanganStyle.node} />
-              <View style={PolaBilanganStyle.node} />
-              <View style={PolaBilanganStyle.node} />
-            </View>
-            <View style={PolaBilanganStyle.nodeWrap}>
-              <View style={PolaBilanganStyle.node} />
-              <View style={PolaBilanganStyle.node} />
-              <View style={PolaBilanganStyle.node} />
-            </View>
-            <View style={PolaBilanganStyle.nodeWrap}>
-              <View style={PolaBilanganStyle.node} />
-              <View style={PolaBilanganStyle.node} />
-              <View style={PolaBilanganStyle.node} />
-            </View>
-            <View style={PolaBilanganStyle.nodeWrap}>
-              <View style={PolaBilanganStyle.node} />
-              <View style={PolaBilanganStyle.node} />
-              <View style={PolaBilanganStyle.node} />
-            </View>
-            <TextAtoms isi="12,..." styles={PolaBilanganStyle.desc} />
-          </View>
-        </View>
-        <TextAtoms
-          isi="6. Barisan Bilangan Segitiga → Uₙ = ½n(n+1) :"
-          styles={PolaBilanganStyle.desc}
-        />
-        <View style={PolaBilanganStyle.nodeContainer}>
-          <View style={PolaBilanganStyle.nodeWrapContainer}>
-            <View style={PolaBilanganStyle.nodeWrap}>
-              <View style={PolaBilanganStyle.nodeNotActive} />
-            </View>
-            <View style={PolaBilanganStyle.nodeWrap}>
-              <View style={PolaBilanganStyle.nodeNotActive} />
-            </View>
-            <View style={PolaBilanganStyle.nodeWrap}>
-              <View style={PolaBilanganStyle.nodeNotActive} />
-            </View>
-            <View style={PolaBilanganStyle.nodeWrap}>
-              <View style={PolaBilanganStyle.node} />
-            </View>
-            <TextAtoms isi="1," styles={PolaBilanganStyle.desc} />
-          </View>
-          <View style={PolaBilanganStyle.nodeWrapContainer}>
-            <View style={PolaBilanganStyle.nodeWrap}>
-              <View style={PolaBilanganStyle.nodeNotActive} />
-              <View style={PolaBilanganStyle.nodeNotActive} />
-            </View>
-            <View style={PolaBilanganStyle.nodeWrap}>
-              <View style={PolaBilanganStyle.nodeNotActive} />
-              <View style={PolaBilanganStyle.nodeNotActive} />
-            </View>
-            <View style={PolaBilanganStyle.nodeWrap}>
-              <View style={PolaBilanganStyle.node} />
-              {/* <View style={PolaBilanganStyle.node} /> */}
-            </View>
-            <View style={PolaBilanganStyle.nodeWrap}>
-              <View style={PolaBilanganStyle.node} />
-              <View style={PolaBilanganStyle.node} />
-            </View>
-            <TextAtoms isi="3," styles={PolaBilanganStyle.desc} />
-          </View>
-          <View style={PolaBilanganStyle.nodeWrapContainer}>
-            <View style={PolaBilanganStyle.nodeWrap}>
-              <View style={PolaBilanganStyle.nodeNotActive} />
-              <View style={PolaBilanganStyle.nodeNotActive} />
-              <View style={PolaBilanganStyle.nodeNotActive} />
-            </View>
-            <View style={PolaBilanganStyle.nodeWrap}>
-              <View style={PolaBilanganStyle.node} />
-              {/* <View style={PolaBilanganStyle.node} /> */}
-              {/* <View style={PolaBilanganStyle.node} /> */}
-            </View>
-            <View style={PolaBilanganStyle.nodeWrap}>
-              <View style={PolaBilanganStyle.node} />
-              <View style={PolaBilanganStyle.node} />
-              {/* <View style={PolaBilanganStyle.node} /> */}
             </View>
             <View style={PolaBilanganStyle.nodeWrap}>
               <View style={PolaBilanganStyle.node} />
@@ -430,17 +178,409 @@ function PolaBilanganTemplate() {
             <TextAtoms isi="6,..." styles={PolaBilanganStyle.desc} />
           </View>
         </View>
+        <TextAtoms
+          isi="Berdasarkan Gambar diatas Pola ke-4 adalah..."
+          styles={PolaBilanganStyle.desc}
+        />
+        <View style={PolaBilanganStyle.nodeContainer2}>
+          <View style={PolaBilanganStyle.nodeWrapContainer}>
+            <View style={PolaBilanganStyle.nodeWrap}>
+              <View style={PolaBilanganStyle.node} />
+              <View style={PolaBilanganStyle.node} />
+              <View style={PolaBilanganStyle.node} />
+              <View style={PolaBilanganStyle.node} />
+            </View>
+            <View style={PolaBilanganStyle.nodeWrap}>
+              <View style={PolaBilanganStyle.node} />
+              <View style={PolaBilanganStyle.node} />
+              <View style={PolaBilanganStyle.node} />
+              <View style={PolaBilanganStyle.node} />
+            </View>
+            <TextAtoms isi="8" styles={PolaBilanganStyle.desc} />
+          </View>
+        </View>
+        <TextAtoms
+          isi="Karena rumusnya adalah Uₙ = 2n"
+          styles={PolaBilanganStyle.desc}
+        />
+        <TextAtoms
+          isi="3. Barisan Bilangan Ganjil"
+          styles={PolaBilanganStyle.desc}
+        />
+        <View style={PolaBilanganStyle.nodeContainer}>
+          <View style={PolaBilanganStyle.nodeWrapContainer}>
+            <View style={PolaBilanganStyle.nodeWrap}>
+              <View style={PolaBilanganStyle.nodeNotActive} />
+            </View>
+            <View style={PolaBilanganStyle.nodeWrap}>
+              <View style={PolaBilanganStyle.nodeNotActive} />
+            </View>
+            <View style={PolaBilanganStyle.nodeWrap}>
+              <View style={PolaBilanganStyle.nodeNotActive} />
+            </View>
+            <View style={PolaBilanganStyle.nodeWrap}>
+              <View style={PolaBilanganStyle.node} />
+            </View>
+            <TextAtoms isi="1," styles={PolaBilanganStyle.desc} />
+          </View>
+          <View style={PolaBilanganStyle.nodeWrapContainer}>
+            <View style={PolaBilanganStyle.nodeWrap}>
+              <View style={PolaBilanganStyle.nodeNotActive} />
+              <View style={PolaBilanganStyle.nodeNotActive} />
+            </View>
+            <View style={PolaBilanganStyle.nodeWrap}>
+              <View style={PolaBilanganStyle.nodeNotActive} />
+              <View style={PolaBilanganStyle.nodeNotActive} />
+            </View>
+            <View style={PolaBilanganStyle.nodeWrap}>
+              <View style={PolaBilanganStyle.node} />
+              <View style={PolaBilanganStyle.nodeNotActive} />
+            </View>
+            <View style={PolaBilanganStyle.nodeWrap}>
+              <View style={PolaBilanganStyle.node} />
+              <View style={PolaBilanganStyle.node} />
+            </View>
+            <TextAtoms isi="3," styles={PolaBilanganStyle.desc} />
+          </View>
+          <View style={PolaBilanganStyle.nodeWrapContainer}>
+            <View style={PolaBilanganStyle.nodeWrap}>
+              <View style={PolaBilanganStyle.nodeNotActive} />
+              <View style={PolaBilanganStyle.nodeNotActive} />
+              <View style={PolaBilanganStyle.nodeNotActive} />
+            </View>
+            <View style={PolaBilanganStyle.nodeWrap}>
+              <View style={PolaBilanganStyle.node} />
+              <View style={PolaBilanganStyle.nodeNotActive} />
+              <View style={PolaBilanganStyle.nodeNotActive} />
+            </View>
+            <View style={PolaBilanganStyle.nodeWrap}>
+              <View style={PolaBilanganStyle.node} />
+              <View style={PolaBilanganStyle.nodeNotActive} />
+              <View style={PolaBilanganStyle.nodeNotActive} />
+            </View>
+            <View style={PolaBilanganStyle.nodeWrap}>
+              <View style={PolaBilanganStyle.node} />
+              <View style={PolaBilanganStyle.node} />
+              <View style={PolaBilanganStyle.node} />
+            </View>
+            <TextAtoms isi="5,..." styles={PolaBilanganStyle.desc} />
+          </View>
+        </View>
+        <TextAtoms
+          isi="Berdasarkan Gambar diatas Pola ke-4 adalah..."
+          styles={PolaBilanganStyle.desc}
+        />
+        <View style={PolaBilanganStyle.nodeContainer2}>
+        <View style={PolaBilanganStyle.nodeWrapContainer}>
+            <View style={PolaBilanganStyle.nodeWrap}>
+              <View style={PolaBilanganStyle.node} />
+              <View style={PolaBilanganStyle.nodeNotActive} />
+              <View style={PolaBilanganStyle.nodeNotActive} />
+              <View style={PolaBilanganStyle.nodeNotActive} />
+            </View>
+            <View style={PolaBilanganStyle.nodeWrap}>
+              <View style={PolaBilanganStyle.node} />
+              <View style={PolaBilanganStyle.nodeNotActive} />
+              <View style={PolaBilanganStyle.nodeNotActive} />
+              <View style={PolaBilanganStyle.nodeNotActive} />
+            </View>
+            <View style={PolaBilanganStyle.nodeWrap}>
+              <View style={PolaBilanganStyle.node} />
+              <View style={PolaBilanganStyle.nodeNotActive} />
+              <View style={PolaBilanganStyle.nodeNotActive} />
+              <View style={PolaBilanganStyle.nodeNotActive} />
+            </View>
+            <View style={PolaBilanganStyle.nodeWrap}>
+              <View style={PolaBilanganStyle.node} />
+              <View style={PolaBilanganStyle.node} />
+              <View style={PolaBilanganStyle.node} />
+              <View style={PolaBilanganStyle.node} />
+            </View>
+            <TextAtoms isi="7" styles={PolaBilanganStyle.desc} />
+          </View>
+        </View>
+        <TextAtoms
+          isi="Karena rumusnya adalah Uₙ = 2n-1"
+          styles={PolaBilanganStyle.desc}
+        />
+
+        <TextAtoms
+          isi="4. Barisan Bilangan Persegi"
+          styles={PolaBilanganStyle.desc}
+        />
+        <View style={PolaBilanganStyle.nodeContainer3}>
+          <View style={PolaBilanganStyle.nodeWrapContainer}>
+            <View style={PolaBilanganStyle.nodeWrap}>
+              <View style={PolaBilanganStyle.nodeNotActive} />
+            </View>
+            <View style={PolaBilanganStyle.nodeWrap}>
+              <View style={PolaBilanganStyle.nodeNotActive} />
+            </View>
+            <View style={PolaBilanganStyle.nodeWrap}>
+              <View style={PolaBilanganStyle.nodeNotActive} />
+            </View>
+            <View style={PolaBilanganStyle.nodeWrap}>
+              <View style={PolaBilanganStyle.node} />
+            </View>
+            <TextAtoms isi="1," styles={PolaBilanganStyle.desc} />
+          </View>
+          <View style={PolaBilanganStyle.nodeWrapContainer}>
+            <View style={PolaBilanganStyle.nodeWrap}>
+              <View style={PolaBilanganStyle.nodeNotActive} />
+              <View style={PolaBilanganStyle.nodeNotActive} />
+            </View>
+            <View style={PolaBilanganStyle.nodeWrap}>
+              <View style={PolaBilanganStyle.nodeNotActive} />
+              <View style={PolaBilanganStyle.nodeNotActive} />
+            </View>
+            <View style={PolaBilanganStyle.nodeWrap}>
+              <View style={PolaBilanganStyle.node} />
+              <View style={PolaBilanganStyle.node} />
+            </View>
+            <View style={PolaBilanganStyle.nodeWrap}>
+              <View style={PolaBilanganStyle.node} />
+              <View style={PolaBilanganStyle.node} />
+            </View>
+            <TextAtoms isi="4," styles={PolaBilanganStyle.desc} />
+          </View>
+        </View>
+        <TextAtoms
+          isi="Berdasarkan Gambar diatas Pola ke-3 adalah..."
+          styles={PolaBilanganStyle.desc}
+        />
+        <View style={PolaBilanganStyle.nodeContainer2}>
+        <View style={PolaBilanganStyle.nodeWrapContainer}>
+            <View style={PolaBilanganStyle.nodeWrap}>
+              <View style={PolaBilanganStyle.nodeNotActive} />
+              <View style={PolaBilanganStyle.nodeNotActive} />
+              <View style={PolaBilanganStyle.nodeNotActive} />
+            </View>
+            <View style={PolaBilanganStyle.nodeWrap}>
+              <View style={PolaBilanganStyle.node} />
+              <View style={PolaBilanganStyle.node} />
+              <View style={PolaBilanganStyle.node} />
+            </View>
+            <View style={PolaBilanganStyle.nodeWrap}>
+              <View style={PolaBilanganStyle.node} />
+              <View style={PolaBilanganStyle.node} />
+              <View style={PolaBilanganStyle.node} />
+            </View>
+            <View style={PolaBilanganStyle.nodeWrap}>
+              <View style={PolaBilanganStyle.node} />
+              <View style={PolaBilanganStyle.node} />
+              <View style={PolaBilanganStyle.node} />
+            </View>
+            <TextAtoms isi="9" styles={PolaBilanganStyle.desc} />
+          </View>
+        </View>
+        <TextAtoms
+          isi="Karena rumusnya adalah Uₙ = n²"
+          styles={PolaBilanganStyle.desc}
+        />
+
+        <TextAtoms
+          isi="5. Barisan Bilangan Persegi Panjang "
+          styles={PolaBilanganStyle.desc}
+        />
+        <View style={PolaBilanganStyle.nodeContainer3}>
+          <View style={PolaBilanganStyle.nodeWrapContainer}>
+            <View style={PolaBilanganStyle.nodeWrap}>
+              <View style={PolaBilanganStyle.nodeNotActive} />
+            </View>
+            <View style={PolaBilanganStyle.nodeWrap}>
+              <View style={PolaBilanganStyle.nodeNotActive} />
+            </View>
+            <View style={PolaBilanganStyle.nodeWrap}>
+              <View style={PolaBilanganStyle.nodeNotActive} />
+            </View>
+            <View style={PolaBilanganStyle.nodeWrap}>
+              <View style={PolaBilanganStyle.node} />
+            </View>
+            <View style={PolaBilanganStyle.nodeWrap}>
+              <View style={PolaBilanganStyle.node} />
+            </View>
+            <TextAtoms isi="2," styles={PolaBilanganStyle.desc} />
+          </View>
+          <View style={PolaBilanganStyle.nodeWrapContainer}>
+            <View style={PolaBilanganStyle.nodeWrap}>
+              <View style={PolaBilanganStyle.nodeNotActive} />
+              <View style={PolaBilanganStyle.nodeNotActive} />
+            </View>
+            <View style={PolaBilanganStyle.nodeWrap}>
+              <View style={PolaBilanganStyle.nodeNotActive} />
+              <View style={PolaBilanganStyle.nodeNotActive} />
+            </View>
+            <View style={PolaBilanganStyle.nodeWrap}>
+              <View style={PolaBilanganStyle.node} />
+              <View style={PolaBilanganStyle.node} />
+            </View>
+            <View style={PolaBilanganStyle.nodeWrap}>
+              <View style={PolaBilanganStyle.node} />
+              <View style={PolaBilanganStyle.node} />
+            </View>
+            <View style={PolaBilanganStyle.nodeWrap}>
+              <View style={PolaBilanganStyle.node} />
+              <View style={PolaBilanganStyle.node} />
+            </View>
+            <TextAtoms isi="6," styles={PolaBilanganStyle.desc} />
+          </View>
+        </View>
+        <TextAtoms
+          isi="Berdasarkan Gambar diatas Pola ke-3 adalah..."
+          styles={PolaBilanganStyle.desc}
+        />
+        <View style={PolaBilanganStyle.nodeContainer2}>
+        <View style={PolaBilanganStyle.nodeWrapContainer}>
+            <View style={PolaBilanganStyle.nodeWrap}>
+              <View style={PolaBilanganStyle.nodeNotActive} />
+              <View style={PolaBilanganStyle.nodeNotActive} />
+              <View style={PolaBilanganStyle.nodeNotActive} />
+            </View>
+            <View style={PolaBilanganStyle.nodeWrap}>
+              <View style={PolaBilanganStyle.node} />
+              <View style={PolaBilanganStyle.node} />
+              <View style={PolaBilanganStyle.node} />
+            </View>
+            <View style={PolaBilanganStyle.nodeWrap}>
+              <View style={PolaBilanganStyle.node} />
+              <View style={PolaBilanganStyle.node} />
+              <View style={PolaBilanganStyle.node} />
+            </View>
+            <View style={PolaBilanganStyle.nodeWrap}>
+              <View style={PolaBilanganStyle.node} />
+              <View style={PolaBilanganStyle.node} />
+              <View style={PolaBilanganStyle.node} />
+            </View>
+            <View style={PolaBilanganStyle.nodeWrap}>
+              <View style={PolaBilanganStyle.node} />
+              <View style={PolaBilanganStyle.node} />
+              <View style={PolaBilanganStyle.node} />
+            </View>
+            <TextAtoms isi="12" styles={PolaBilanganStyle.desc} />
+          </View>
+        </View>
+        <TextAtoms
+          isi="Karena rumusnya adalah Uₙ = n(n + 1)"
+          styles={PolaBilanganStyle.desc}
+        />
+
+        <TextAtoms
+          isi="6. Barisan Bilangan Segitiga"
+          styles={PolaBilanganStyle.desc}
+        />
+        <View style={PolaBilanganStyle.nodeContainer}>
+          <View style={PolaBilanganStyle.nodeWrapContainer}>
+            <View style={PolaBilanganStyle.nodeWrap}>
+              <View style={PolaBilanganStyle.nodeNotActive} />
+            </View>
+            <View style={PolaBilanganStyle.nodeWrap}>
+              <View style={PolaBilanganStyle.nodeNotActive} />
+            </View>
+            <View style={PolaBilanganStyle.nodeWrap}>
+              <View style={PolaBilanganStyle.nodeNotActive} />
+            </View>
+            <View style={PolaBilanganStyle.nodeWrap}>
+              <View style={PolaBilanganStyle.node} />
+            </View>
+            <TextAtoms isi="1," styles={PolaBilanganStyle.desc} />
+          </View>
+          <View style={PolaBilanganStyle.nodeWrapContainer}>
+            <View style={PolaBilanganStyle.nodeWrap}>
+              <View style={PolaBilanganStyle.nodeNotActive} />
+              <View style={PolaBilanganStyle.nodeNotActive} />
+            </View>
+            <View style={PolaBilanganStyle.nodeWrap}>
+              <View style={PolaBilanganStyle.nodeNotActive} />
+              <View style={PolaBilanganStyle.nodeNotActive} />
+            </View>
+            <View style={PolaBilanganStyle.nodeWrap}>
+              <View style={PolaBilanganStyle.node} />
+              {/* <View style={PolaBilanganStyle.node} /> */}
+            </View>
+            <View style={PolaBilanganStyle.nodeWrap}>
+              <View style={PolaBilanganStyle.node} />
+              <View style={PolaBilanganStyle.node} />
+            </View>
+            <TextAtoms isi="3," styles={PolaBilanganStyle.desc} />
+          </View>
+          <View style={PolaBilanganStyle.nodeWrapContainer}>
+            <View style={PolaBilanganStyle.nodeWrap}>
+              <View style={PolaBilanganStyle.nodeNotActive} />
+              <View style={PolaBilanganStyle.nodeNotActive} />
+              <View style={PolaBilanganStyle.nodeNotActive} />
+            </View>
+            <View style={PolaBilanganStyle.nodeWrap}>
+              <View style={PolaBilanganStyle.node} />
+              {/* <View style={PolaBilanganStyle.node} /> */}
+              {/* <View style={PolaBilanganStyle.node} /> */}
+            </View>
+            <View style={PolaBilanganStyle.nodeWrap}>
+              <View style={PolaBilanganStyle.node} />
+              <View style={PolaBilanganStyle.node} />
+              {/* <View style={PolaBilanganStyle.node} /> */}
+            </View>
+            <View style={PolaBilanganStyle.nodeWrap}>
+              <View style={PolaBilanganStyle.node} />
+              <View style={PolaBilanganStyle.node} />
+              <View style={PolaBilanganStyle.node} />
+            </View>
+            <TextAtoms isi="6" styles={PolaBilanganStyle.desc} />
+          </View>
+          
+        </View>
+        <TextAtoms
+          isi="Berdasarkan Gambar diatas Pola ke-3 adalah..."
+          styles={PolaBilanganStyle.desc}
+        />
+        <View style={PolaBilanganStyle.nodeContainer2}>
+        <View style={PolaBilanganStyle.nodeWrapContainer}>
+            <View style={PolaBilanganStyle.nodeWrap}>
+              <View style={PolaBilanganStyle.node} />
+              {/* <View style={PolaBilanganStyle.node} /> */}
+              {/* <View style={PolaBilanganStyle.node} /> */}
+              {/* <View style={PolaBilanganStyle.node} /> */}
+            </View>
+            <View style={PolaBilanganStyle.nodeWrap}>
+              <View style={PolaBilanganStyle.node} />
+              <View style={PolaBilanganStyle.node} />
+              {/* <View style={PolaBilanganStyle.node} /> */}
+              {/* <View style={PolaBilanganStyle.node} /> */}
+            </View>
+            <View style={PolaBilanganStyle.nodeWrap}>
+              <View style={PolaBilanganStyle.node} />
+              <View style={PolaBilanganStyle.node} />
+              <View style={PolaBilanganStyle.node} />
+              {/* <View style={PolaBilanganStyle.node} /> */}
+            </View>
+            <View style={PolaBilanganStyle.nodeWrap}>
+              <View style={PolaBilanganStyle.node} />
+              <View style={PolaBilanganStyle.node} />
+              <View style={PolaBilanganStyle.node} />
+              <View style={PolaBilanganStyle.node} />
+            </View>
+            <TextAtoms isi="10" styles={PolaBilanganStyle.desc} />
+          </View>
+        </View>
+        <TextAtoms
+          isi="Karena rumusnya adalah Uₙ = ½ n(n + 1)"
+          styles={PolaBilanganStyle.desc}
+        />
         <View style={PolaBilanganStyle.descSpesialContainer}>
           <TextAtoms
-            isi="7. Barisan Bilangan Segitiga Pascal :"
+            isi="7. Barisan Bilangan Segitiga Pascal"
             styles={PolaBilanganStyle.descSpesial}
           />
           <TextAtoms
-            isi="Setiap Bilangan dalam barisan merupakan jumlah dari dua bilangan yang berdekatan pada barisan sebelumnya."
-            styles={PolaBilanganStyle.descSpesial}
+            isi="Segitiga Pascal adalah susunan segitiga yang dibuat dengan menjumlahkan elemen yang berdekatan dalam baris sebelumnya. Susunan segitiga ini dibuat dengan menjumlahkan elemen yang berdekatan dalam baris sebelumnya."
+            styles={[PolaBilanganStyle.descSpesial, {marginTop: 10}]}
+          />
+           <TextAtoms
+            isi="Misalkan variabel a dan b dijumlahkan, kemudian dipangkatkan dari 0 hingga pangkat tiga 3, akan menghasilkan penjabaran seperti berikut."
+            styles={[PolaBilanganStyle.descSpesial, {marginTop: 10}]}
           />
         </View>
-        <View style={PolaBilanganStyle.nodeContainerSpesial}>
+        <Image source={segitigadua} style={PolaBilanganStyle.image}/>
+        {/* <View style={PolaBilanganStyle.nodeContainerSpesial}>
           <View style={PolaBilanganStyle.nodeWrapSpesialContainer}>
             <TextAtoms isi="1" styles={PolaBilanganStyle.descSpesialIsi} />
           </View>
@@ -480,40 +620,88 @@ function PolaBilanganTemplate() {
               styles={PolaBilanganStyle.descSpesialIsi}
             />
           </View>
+        </View> */}
+        <View style={PolaBilanganStyle.descSpesialContainer}>
+          <TextAtoms
+            isi="Perhatikan susunan angka yang dicetak tebal dari atas kebawah, hingga menemukan suatu bentuk segitiga. Pola bilangan tersebutlah yang selanjutnya dinamakan dengan segitiga pascal."
+            styles={PolaBilanganStyle.descSpesial}
+          />
+          <TextAtoms
+            isi="Segitiga Pascal adalah aturan geometri pada koefisien binomial dalam sebuah segitiga."
+            styles={[PolaBilanganStyle.descSpesial, {marginTop: 10}]}
+          />
+          <TextAtoms
+            isi="Pola Bilangan Pada Segitiga Pascal yaitu Susunan segitiga Pascal dibuat dengan menjumlahkan elemen yang berdekatan dalam baris sebelumnya. Dan Barisan segitiga Pascal umumnya dihitung dimulai dengan baris kosong, dan nomor-nomor dalam barisan ganjil diatur agar terkait dengan nomor-nomor dalam baris genap."
+            styles={[PolaBilanganStyle.descSpesial, {marginTop: 10}]}
+          />
+           <TextAtoms
+            isi="Konsep segitiga Pascal adalah melakukan perhitungan tanpa memperhatikan variabel a dan b. Dalam artian, cukup memperhatikan koefisien binomialnya, sebagai berikut."
+            styles={[PolaBilanganStyle.descSpesial, {marginTop: 10}]}
+          />
+          <TextAtoms
+            isi="• Di barisan nol, hanya tulis angka 1."
+            styles={[PolaBilanganStyle.descSpesial, {marginTop: 20}]}
+          />
+          <TextAtoms
+            isi="• Di setiap barisan di bawahnya, setiap kiri dan kanan tulis angka 1."
+            styles={PolaBilanganStyle.descSpesial}
+          />
+          <TextAtoms
+            isi="• Hasil penjumlahan dua angka di atasnya, kemudian ditulis pada baris di bawahnya."
+            styles={PolaBilanganStyle.descSpesial}
+          />
+          <TextAtoms
+            isi="• Angka 1 di kiri dan kanan menurut (2), selalu mengapit hasil (3)."
+            styles={PolaBilanganStyle.descSpesial}
+          />
+          <TextAtoms
+            isi="• Perhitungan dapat diteruskan dengan pola yang sama."
+            styles={PolaBilanganStyle.descSpesial}
+          />
+        </View>
+        <Image source={segitigatiga} style={PolaBilanganStyle.image2}/>
+        <View style={PolaBilanganStyle.descSpesialContainer}>
+          <TextAtoms
+            isi="Perhatikan pola dalam mengerjakan soal pangkat 2 berikut dan perhatikan koefisien untuk pangkat 2 dalam skema segitiga Pascal di atas."
+            styles={PolaBilanganStyle.descSpesial}
+          />
+          <TextAtoms
+            isi="(a+b)² = a² + 2ab + b²"
+            styles={PolaBilanganStyle.descSpesial}
+          />
+          <TextAtoms
+            isi="Contoh lainnya, perhatikan pola dalam mengerjakan soal pangkat 3 berikut dan perhatikan koefisien untuk pangkat 3 dalam skema segitiga Pascal di atas."
+            styles={[PolaBilanganStyle.descSpesial, {marginTop: 10}]}
+          />
+           <TextAtoms
+            isi="(a+b)³ = 1a³bº + 3a²b¹ + 3a¹b² + 1aºb³"
+            styles={PolaBilanganStyle.descSpesial}
+          />
+          <TextAtoms
+            isi="(perhatikan pola pangkatnya)"
+            styles={PolaBilanganStyle.descSpesial}
+          />
+          <TextAtoms
+            isi="= a³ + 3a²b + 3ab² + b³"
+            styles={PolaBilanganStyle.descSpesial}
+          />
         </View>
         <View style={PolaBilanganStyle.descSpesialContainer}>
           <TextAtoms
-            isi="Total Bilangan Setiap Garis :"
-            styles={PolaBilanganStyle.descSpesial}
+            isi="• Contoh Soal Bilangan Segitiga Pascal"
+            styles={[PolaBilanganStyle.descSpesial, {marginTop: 20}]}
           />
           <TextAtoms
-            isi="Baris 1 : 1, Maka Total Bilangan adalah 1."
-            styles={PolaBilanganStyle.descSpesial}
+            isi="Tentukan pola atau aturan dari barisan di bawah ini !"
+            styles={[PolaBilanganStyle.descSpesial, {marginTop: 10}]}
+          />
+           <TextAtoms
+            isi="1, 3, 5, 7, …"
+            styles={[PolaBilanganStyle.descSpesial, {marginTop: 10}]}
           />
           <TextAtoms
-            isi="Baris 2 : 1 + 1 = 2, Maka Total Bilangan adalah 2."
-            styles={PolaBilanganStyle.descSpesial}
-          />
-          <TextAtoms
-            isi="Baris 3 : 1 + 2 + 1 = 4, Maka Total Bilangan adalah 4."
-            styles={PolaBilanganStyle.descSpesial}
-          />
-          <TextAtoms
-            isi="Baris 4 : 1 + 3 + 3 + 1 = 8, Maka Total Bilangan adalah 8."
-            styles={PolaBilanganStyle.descSpesial}
-          />
-          <TextAtoms
-            isi="Baris 5 : 1 + 4 + 6 + 4 + 1 = 16, Maka Total Bilangan adalah 16."
-            styles={PolaBilanganStyle.descSpesial}
-          />
-          <TextAtoms
-            isi="Baris 6 : 1 + 5 + 10 + 10 + 5 + 1 = 32, Maka Total Bilangan adalah 32."
-            styles={PolaBilanganStyle.descSpesial}
-          />
-          <TextAtoms isi=" " styles={PolaBilanganStyle.descSpesial} />
-          <TextAtoms
-            isi="Maka, Barisan Bilangan Segitiga Pascal → Uₙ = n²⁻¹"
-            styles={PolaBilanganStyle.descSpesial}
+            isi="Jawab : Aturan atau pola dari barisan bilangan : 1, 3, 5, 7, … secara definisi adalah bilangan ganjil mulai 1 atau bilangan naik yang memiliki selisih 2 yang dimulai dari 1. Sedangkansecara rumus polanya adalah Uₙ = 2n – 1 dengan n dimulai dari 1."
+            styles={[PolaBilanganStyle.descSpesial, {marginTop: 10}]}
           />
         </View>
         {/* <View style={PolaBilanganStyle.descSpesialContainer}>
@@ -629,4 +817,4 @@ function PolaBilanganTemplate() {
   );
 }
 
-export default PolaBilanganTemplate;
+export default PolaBilanganMateriTemplate;

@@ -3,6 +3,8 @@ import {View, ScrollView, StyleSheet, ImageBackground} from 'react-native';
 import Atoms from '../atoms';
 import Styles from '../../styles';
 import Img from '../../assets';
+import Color from '../../styles/colors';
+
 const {bg} = Img;
 
 const {DeretAritmatikaStyle} = Styles.Stylesheets;
@@ -46,7 +48,7 @@ function DeretAritmatikaContohSoalTemplates() {
             styles={[DeretAritmatikaStyle.descSpesial, {marginLeft: 180}]}
           />
         </View>
-        <TextAtoms isi="Cara Lain :" styles={DeretAritmatikaStyle.desc} />
+        <TextAtoms isi="Cara Lain Contoh 1:" styles={DeretAritmatikaStyle.desc} />
         <View style={DeretAritmatikaStyle.descSpesialContainer}>
           <TextAtoms
             isi="S₅₀ = ½ x 50 ( 2 x 5 + (50-1) 4)"
@@ -96,22 +98,22 @@ function DeretAritmatikaContohSoalTemplates() {
         <View
           style={[
             DeretAritmatikaStyle.descSpesialContainer,
-            {padding: 5, borderWidth: StyleSheet.hairlineWidth},
+            {padding: 5, borderWidth: StyleSheet.hairlineWidth, borderColor: Color.GREEN2_COLOR},
           ]}>
           <TextAtoms
-            isi="• Penyelesaian:"
+            isi="• Penyelesaian Contoh 2:"
             styles={DeretAritmatikaStyle.descSpesial2}
           />
           <TextAtoms
-            isi="Sₙ =ⁿ⁄₂ (2a + (n – 1)b)"
+            isi="Sₙ = ⁿ⁄₂ (2a + (n – 1)b)"
             styles={DeretAritmatikaStyle.descSpesial2}
           />
           <TextAtoms
-            isi="S¹⁰= ¹⁰⁄₂ ( 2 (3.000.000) + ( (10-1) x (500.000))"
+            isi="S₁₀= ¹⁰⁄₂ ( 2 (3.000.000) + ( (10-1) x (500.000))"
             styles={DeretAritmatikaStyle.descSpesial2}
           />
           <TextAtoms
-            isi="S¹⁰ = 5 (6.000.000 + 4.500.000) S¹⁰ = 5 (10.500.000)"
+            isi="S₁₀ = 5 (6.000.000 + 4.500.000) S₁₀ = 5 (10.500.000)"
             styles={DeretAritmatikaStyle.descSpesial2}
           />
           <TextAtoms
@@ -126,7 +128,7 @@ function DeretAritmatikaContohSoalTemplates() {
         </View>
         <TextAtoms isi="Contoh 3 :" styles={DeretAritmatikaStyle.judul} />
         <TextAtoms
-          isi="Seorang pemetik kebun memetik jeruknya setiap hari, dan mencatat banyaknya jeruk yang dipetik.  Ternyata banyaknya jeruk yang dipetik pada hari ke-n memenuhi rumus Un = 50 + 25n. Jumlah jeruk yang telah dipetik selama 10 hari yang pertama adalah ...."
+          isi="Seorang pemetik kebun memetik jeruknya setiap hari, dan mencatat banyaknya jeruk yang dipetik.  Ternyata banyaknya jeruk yang dipetik pada hari ke-n memenuhi rumus Uₙ = 50 + 25n. Jumlah jeruk yang telah dipetik selama 10 hari yang pertama adalah ...."
           styles={DeretAritmatikaStyle.desc}
         />
         <TextAtoms isi="Jawab :" styles={DeretAritmatikaStyle.desc} />
@@ -136,7 +138,7 @@ function DeretAritmatikaContohSoalTemplates() {
             {marginBottom: 15},
           ]}>
           <TextAtoms
-            isi="Diketahui Un = 50 + 25n, maka:"
+            isi="Diketahui Uₙ = 50 + 25n, maka:"
             styles={DeretAritmatikaStyle.descSpesial}
           />
           <TextAtoms

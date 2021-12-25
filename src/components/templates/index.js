@@ -14,6 +14,11 @@ import BarisanAritmatikaContohSoalTemplates from './barisanAritmatikaContohSoal.
 import DeretAritmatikaContohSoalTemplates from './deretAritmatikaContohSoal.templates';
 import BarisanGeometriContohSoalTemplates from './barisanGeometriContohSoal.templates';
 import TentangTemplate from './tentang.templates';
+import RangkumanTemplate from './rangkuman.templates';
+import PolaBilanganMateriTemplate from './polaBilanganMateri.templates';
+import BarisanAritmatikaMateriTemplate from './barisanAritmatikaMateri.templates';
+import DeretAritmatikaMateriTemplates from './deretAritmatikaMateri.templates';
+import BarisanGeometriMateriTemplates from './barisanGeometriMateri.templates';
 
 export default {
   SplashScreenTemplate,
@@ -32,4 +37,9 @@ export default {
   DeretAritmatikaContohSoalTemplates,
   BarisanGeometriContohSoalTemplates,
   TentangTemplate,
+  RangkumanTemplate,
+  PolaBilanganMateriTemplate,
+  BarisanAritmatikaMateriTemplate,
+  DeretAritmatikaMateriTemplates,
+  BarisanGeometriMateriTemplates,
 };

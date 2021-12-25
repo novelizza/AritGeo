@@ -14,22 +14,22 @@ export default StyleSheet.create({
   judul: {
     alignSelf: 'center',
     fontWeight: 'bold',
-    color: Color.BLACK_COLOR,
+    color: Color.GREEN2_COLOR,
     fontSize: 30,
   },
   desc: {
     fontSize: 18,
-    color: Color.BLACK_COLOR,
+    color: Color.GREEN2_COLOR,
     textAlign: 'justify',
     margin: 10,
   },
   descSpesial: {
     fontSize: 18,
-    color: Color.BLACK_COLOR,
+    color: Color.GREEN2_COLOR,
     textAlign: 'justify',
   },
   descSpesial2: {
-    color: Color.BLACK_COLOR,
+    color: Color.GREEN2_COLOR,
     textAlign: 'justify',
   },
   descSpesialContainer: {
@@ -43,6 +43,7 @@ export default StyleSheet.create({
     width: '50%',
     borderWidth: StyleSheet.hairlineWidth,
     padding: 5,
+    borderColor: Color.GREEN2_COLOR
   },
   descSpesial2Wrap: {
     width: '50%',
@@ -57,5 +58,23 @@ export default StyleSheet.create({
     flexDirection: 'row',
     marginHorizontal: 10,
     justifyContent: 'space-between',
+  },
+  kotakRumus2:{
+    backgroundColor: Color.BLACK_COLOR,
+    width: '90%',
+    alignSelf: 'center',
+    height: '20%',
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: 2,
+    flexDirection: 'row',
+    marginBottom: 100,
+  },
+  descRumus: {
+    fontSize: 18,
+    color: Color.WHITE_COLOR,
+    textAlign: 'justify',
+    fontWeight: 'bold',
+    fontStyle: 'italic',
   },
 });

@@ -14,6 +14,11 @@ import BarisanAritmatikaContohSoalPages from './barisanAritmatikaContohSoal.page
 import DeretAritmatikaContohSoalPages from './deretAritmatikaContohSoal.pages';
 import BarisGeometriContohSoalPages from './barisanGeometriContohSoal.pages';
 import TentangPages from './tentang.pages';
+import RangkumanPages from './rangkuman.pages';
+import PolaBilanganMateriPages from './polaBilanganMateri.pages';
+import BarisanAritmatikaMateriPages from './barisanAritmatikaMateri.pages';
+import DeretAritmatikaMateriPages from './deretAritmatikaMateri.pages';
+import BarisanGeometriMateriPages from './barisanGeometriMateri.pages';
 
 export default {
   SplashScreenPages,
@@ -32,4 +37,9 @@ export default {
   DeretAritmatikaContohSoalPages,
   BarisGeometriContohSoalPages,
   TentangPages,
+  RangkumanPages,
+  PolaBilanganMateriPages,
+  BarisanAritmatikaMateriPages,
+  DeretAritmatikaMateriPages,
+  BarisanGeometriMateriPages,
 };

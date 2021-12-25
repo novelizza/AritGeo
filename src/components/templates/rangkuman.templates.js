@@ -13,7 +13,7 @@ const {TextAtoms} = Atoms;
 
 const {Logo, Mascot, bg} = Img;
 
-function MateriTemplate() {
+function RangkumanTemplate() {
   const navigation = useNavigation();
 
   return (
@@ -24,7 +24,7 @@ function MateriTemplate() {
           <View style={HomeStyle.buttonContainer}>
             <TouchableOpacity
               style={HomeStyle.button}
-              onPress={() => navigation.navigate('PolaBilanganMateri')}>
+              onPress={() => navigation.navigate('PolaBilangan')}>
               <Icon name="apps-2-fill" size="45" color={Color.CLOUD_COLOR} />
               <TextAtoms isi="POLA BILANGAN" styles={HomeStyle.buttonTXT} />
             </TouchableOpacity>
@@ -32,7 +32,7 @@ function MateriTemplate() {
           <View style={HomeStyle.buttonContainer}>
             <TouchableOpacity
               style={HomeStyle.button}
-              onPress={() => navigation.navigate('BarisanAritmatikaMateri')}>
+              onPress={() => navigation.navigate('BarisanAritmatika')}>
               <Icon name="numbers-fill" size="45" color={Color.CLOUD_COLOR} />
               <TextAtoms isi="BARIS ARITMATIKA" styles={HomeStyle.buttonTXT} />
             </TouchableOpacity>
@@ -42,7 +42,7 @@ function MateriTemplate() {
           <View style={HomeStyle.buttonContainer}>
             <TouchableOpacity
               style={HomeStyle.button}
-              onPress={() => navigation.navigate('DeretAritmatikaMateri')}>
+              onPress={() => navigation.navigate('DeretAritmatika')}>
               <Icon name="rhythm-fill" size="45" color={Color.CLOUD_COLOR} />
               <TextAtoms isi="DERET ARITMATIKA" styles={HomeStyle.buttonTXT} />
             </TouchableOpacity>
@@ -50,7 +50,7 @@ function MateriTemplate() {
           <View style={HomeStyle.buttonContainer}>
             <TouchableOpacity
               style={HomeStyle.button}
-              onPress={() => navigation.navigate('BarisGeometriMateri')}>
+              onPress={() => navigation.navigate('BarisGeometri')}>
               <Icon name="filter-3-fill" size="45" color={Color.CLOUD_COLOR} />
               <TextAtoms isi="BARIS GEOMETRI" styles={HomeStyle.buttonTXT} />
             </TouchableOpacity>
@@ -68,4 +68,4 @@ function MateriTemplate() {
   );
 }
 
-export default MateriTemplate;
+export default RangkumanTemplate;

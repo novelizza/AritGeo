@@ -9,6 +9,8 @@ import {
 import Atoms from '../atoms';
 import Styles from '../../styles';
 import Img from '../../assets';
+import Color from '../../styles/colors';
+
 const {bg, kurawal} = Img;
 
 const {BarisanArimatikaStyle} = Styles.Stylesheets;
@@ -30,6 +32,7 @@ function BarisanAritmatikaContohSoalTemplates() {
           styles={[BarisanArimatikaStyle.descSpesial, {marginHorizontal: 10}]}
         />
         <TextAtoms isi="Jawab :" styles={BarisanArimatikaStyle.desc} />
+       
         <View style={BarisanArimatikaStyle.descSpesialContainer}>
           <TextAtoms
             isi="4, 1, -2, -5, …"
@@ -62,10 +65,32 @@ function BarisanAritmatikaContohSoalTemplates() {
           styles={[BarisanArimatikaStyle.descSpesial, {marginHorizontal: 10}]}
         />
         <TextAtoms isi="Jawab :" styles={BarisanArimatikaStyle.desc} />
+        <View style={BarisanArimatikaStyle.soalContainer}>
+          <View style={BarisanArimatikaStyle.descSpesial3Container}>
+            <TextAtoms
+              isi="• Diketahui:"
+              styles={BarisanArimatikaStyle.descSpesial2}
+            />
+            <TextAtoms
+              isi="U₅ = 7 dan U₉ = 19"
+              styles={BarisanArimatikaStyle.descSpesial2}
+            />
+          </View>
+          <View style={BarisanArimatikaStyle.descSpesial3Container}>
+            <TextAtoms
+              isi="• Ditanyakan:"
+              styles={BarisanArimatikaStyle.descSpesial2}
+            />
+            <TextAtoms
+              isi="Suku Ke - 13"
+              styles={BarisanArimatikaStyle.descSpesial2}
+            />
+          </View>
+        </View>
         <View style={BarisanArimatikaStyle.descSpesialContainer}>
           <TextAtoms
             isi="U₅ = 7 → a + 4b = 7"
-            styles={BarisanArimatikaStyle.descSpesial}
+            styles={[BarisanArimatikaStyle.descSpesial, {marginTop: 10}]}
           />
           <TextAtoms
             isi="U₉ = 19 → a + 8b = 19"
@@ -132,10 +157,10 @@ function BarisanAritmatikaContohSoalTemplates() {
         <View
           style={[
             BarisanArimatikaStyle.descSpesialContainer,
-            {padding: 5, borderWidth: StyleSheet.hairlineWidth},
+            {padding: 5, borderWidth: StyleSheet.hairlineWidth, marginBottom: 20, borderColor: Color.GREEN2_COLOR},
           ]}>
           <TextAtoms
-            isi="• Penyelesaian:"
+            isi="• Penyelesaian Jawab Contoh 3:"
             styles={BarisanArimatikaStyle.descSpesial2}
           />
           <TextAtoms
@@ -175,7 +200,7 @@ function BarisanAritmatikaContohSoalTemplates() {
             styles={BarisanArimatikaStyle.descSpesial2}
           />
         </View>
-        <TextAtoms isi="Contoh 4" styles={BarisanArimatikaStyle.judul} />
+        {/* <TextAtoms isi="Contoh 4" styles={BarisanArimatikaStyle.judul} />
         <TextAtoms
           isi="Tentukan Rumus suku ke-n dari barisan 1, 3, 6, 10, 15, …"
           styles={BarisanArimatikaStyle.desc}
@@ -185,7 +210,7 @@ function BarisanAritmatikaContohSoalTemplates() {
           style={[
             BarisanArimatikaStyle.descSpesialContainer,
             {marginBottom: 15},
-          ]}>
+          ]}> */}
           {/* <TextAtoms
             isi="a + b + c : 1, 3, 6, 10, 15, ..."
             styles={BarisanArimatikaStyle.descSpesial}
@@ -206,7 +231,7 @@ function BarisanAritmatikaContohSoalTemplates() {
             isi="2a ∶                1   1   1 → Beda Tetap"
             styles={BarisanArimatikaStyle.descSpesial}
           /> */}
-          <Image source={kurawal} style={{height: 110, width: 320}} />
+          {/* <Image source={kurawal} style={{height: 110, width: 320}} />
           <TextAtoms
             isi="2a = 1 → a = ½"
             styles={BarisanArimatikaStyle.descSpesial}
@@ -231,7 +256,7 @@ function BarisanAritmatikaContohSoalTemplates() {
             isi="Un = ½ n (n+1)"
             styles={BarisanArimatikaStyle.descSpesial}
           />
-        </View>
+        </View> */}
       </ScrollView>
     </ImageBackground>
   );

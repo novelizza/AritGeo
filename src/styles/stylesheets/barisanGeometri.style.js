@@ -14,22 +14,30 @@ export default StyleSheet.create({
   judul: {
     alignSelf: 'center',
     fontWeight: 'bold',
-    color: Color.BLACK_COLOR,
+    color: Color.GREEN2_COLOR,
     fontSize: 30,
   },
   desc: {
     fontSize: 18,
-    color: Color.BLACK_COLOR,
+    color: Color.GREEN2_COLOR,
     textAlign: 'justify',
     margin: 10,
   },
+  desc2: {
+    fontSize: 18,
+    color: Color.GREEN2_COLOR,
+    textAlign: 'justify',
+    marginTop: 10,
+    marginLeft: 10,
+    
+  },
   descSpesial: {
     fontSize: 18,
-    color: Color.BLACK_COLOR,
+    color: Color.GREEN2_COLOR,
     textAlign: 'justify',
   },
   descSpesial2: {
-    color: Color.BLACK_COLOR,
+    color: Color.GREEN2_COLOR,
     textAlign: 'justify',
   },
   descSpesialContainer: {
@@ -47,6 +55,7 @@ export default StyleSheet.create({
   descSpesial2Wrap: {
     width: '50%',
     justifyContent: 'center',
+    marginLeft: 10
   },
   line: {
     borderWidth: StyleSheet.hairlineWidth,
@@ -56,6 +65,56 @@ export default StyleSheet.create({
   soalContainer: {
     flexDirection: 'row',
     marginHorizontal: 10,
+    marginTop: 10,
     justifyContent: 'space-between',
+  },
+  descSpesial3Wrap: {
+    width: '70%',
+    justifyContent: 'center',
+    marginLeft: 10,
+    marginBottom: 150,
+  },
+  kotakRumus:{
+    backgroundColor: Color.BLACK_COLOR,
+    width: '60%',
+    alignSelf: 'center',
+    height: '10%',
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: 2,
+  },
+  kotakRumus2:{
+    backgroundColor: Color.BLACK_COLOR,
+    width: '90%',
+    alignSelf: 'center',
+    height: '10%',
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: 2,
+    flexDirection: 'row',
+    marginBottom: 200
+  },
+  kotakRumus3:{
+    backgroundColor: Color.BLACK_COLOR,
+    width: '90%',
+    alignSelf: 'center',
+    height: '10%',
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: 2,
+    flexDirection: 'row',
+  },
+  descRumus: {
+    fontSize: 18,
+    color: Color.WHITE_COLOR,
+    textAlign: 'justify',
+    fontWeight: 'bold',
+    fontStyle: 'italic',
+  },
+  descSpesial3Container: {
+    width: '50%',
+    borderWidth: StyleSheet.hairlineWidth,
+    padding: 5,
+    borderColor: Color.GREEN2_COLOR,
   },
 });

@@ -13,12 +13,12 @@ export default StyleSheet.create({
   judul: {
     alignSelf: 'center',
     fontWeight: 'bold',
-    color: Color.BLACK_COLOR,
+    color: Color.GREEN2_COLOR,
     fontSize: 30,
   },
   desc: {
     fontSize: 18,
-    color: Color.BLACK_COLOR,
+    color: Color.GREEN2_COLOR,
     textAlign: 'justify',
     margin: 10,
   },
@@ -36,24 +36,34 @@ export default StyleSheet.create({
   },
   descSpesial: {
     fontSize: 18,
-    color: Color.BLACK_COLOR,
+    color: Color.GREEN2_COLOR,
     textAlign: 'justify',
     flex: 1,
   },
   descSpesialLain: {
     fontSize: 18,
-    color: Color.BLACK_COLOR,
+    color: Color.GREEN2_COLOR,
     textAlign: 'justify',
   },
   descSpesialIsi: {
     fontSize: 18,
-    color: Color.BLACK_COLOR,
+    color: Color.GREEN2_COLOR,
     textAlign: 'justify',
     marginHorizontal: 10,
   },
   nodeContainer: {
     flexDirection: 'row',
     marginRight: 20,
+    justifyContent: 'space-between'
+  },
+  nodeContainer3: {
+    flexDirection: 'row',
+    marginHorizontal: 100,
+    justifyContent: 'space-between'
+  },
+  nodeContainer2: {
+    flexDirection: 'row',
+    alignSelf: 'center'
   },
   nodeContainerSpesial: {},
   nodeWrapContainer: {
@@ -82,4 +92,17 @@ export default StyleSheet.create({
     width: 21,
     borderRadius: 21 / 2,
   },
+  image:{
+    alignSelf: 'center',
+    backgroundColor: Color.GREEN2_COLOR,
+    borderRadius: 10,
+  },
+  image2:{
+    alignSelf: 'center',
+    backgroundColor: Color.GREEN2_COLOR,
+    borderRadius: 10,
+    width: '90%', 
+    alignSelf:'center', 
+    resizeMode: 'contain'
+  }
 });

@@ -10,7 +10,7 @@ const {DeretAritmatikaStyle} = Styles.Stylesheets;
 
 const {TextAtoms} = Atoms;
 
-function DeretAritmatikaTemplates() {
+function DeretAritmatikaMateriTemplates() {
   // const appState = React.useRef(AppState.currentState);
   // const [appStateVisible, setAppStateVisible] = React.useState(
   //   appState.current,
@@ -64,6 +64,10 @@ function DeretAritmatikaTemplates() {
         style={DeretAritmatikaStyle.container}
         showsVerticalScrollIndicator={false}>
         <TextAtoms isi="DERET ARITMATIKA" styles={DeretAritmatikaStyle.judul} />
+        <TextAtoms
+          isi="Tujuan Pembelajaran deret aritmatika adalah siswa mendiskripsikan deret aritmatika berdasarkan ciri-cirinya."
+          styles={DeretAritmatikaStyle.desc}
+        />
         <TextAtoms
           isi="Deret aritmatika (DA) yaitu jumlah n suku pertama dari BA."
           styles={DeretAritmatikaStyle.desc}
@@ -237,4 +241,4 @@ function DeretAritmatikaTemplates() {
   );
 }
 
-export default DeretAritmatikaTemplates;
+export default DeretAritmatikaMateriTemplates;

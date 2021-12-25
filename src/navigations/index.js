@@ -11,7 +11,7 @@ function Navigator() {
   return (
     <Provider store={store}>
       <NavigationContainer>
-        <Stack.Navigator>
+        <Stack.Navigator initialRouteName='SplashScreen'>
           <Stack.Screen
             name="SplashScreen"
             component={Pages.SplashScreenPages}
@@ -60,6 +60,18 @@ function Navigator() {
               headerShown: null,
             }}
           />
+           <Stack.Screen
+            name="Rangkuman"
+            component={Pages.RangkumanPages}
+            options={{
+              headerStyle: {
+                shadowOpacity: 0,
+                elevation: 0,
+              },
+              headerTitle: null,
+              headerShown: null,
+            }}
+          />
           <Stack.Screen
             name="ContohSoal"
             component={Pages.ContohSoalPages}
@@ -85,8 +97,32 @@ function Navigator() {
             }}
           />
           <Stack.Screen
+            name="PolaBilanganMateri"
+            component={Pages.PolaBilanganMateriPages}
+            options={{
+              headerStyle: {
+                shadowOpacity: 0,
+                elevation: 0,
+              },
+              headerTitle: null,
+              headerShown: null,
+            }}
+          />
+          <Stack.Screen
             name="BarisanAritmatika"
             component={Pages.BarisanAritmatikaPages}
+            options={{
+              headerStyle: {
+                shadowOpacity: 0,
+                elevation: 0,
+              },
+              headerTitle: null,
+              headerShown: null,
+            }}
+          />
+           <Stack.Screen
+            name="BarisanAritmatikaMateri"
+            component={Pages.BarisanAritmatikaMateriPages}
             options={{
               headerStyle: {
                 shadowOpacity: 0,
@@ -109,8 +145,32 @@ function Navigator() {
             }}
           />
           <Stack.Screen
+            name="DeretAritmatikaMateri"
+            component={Pages.DeretAritmatikaMateriPages}
+            options={{
+              headerStyle: {
+                shadowOpacity: 0,
+                elevation: 0,
+              },
+              headerTitle: null,
+              headerShown: null,
+            }}
+          />
+          <Stack.Screen
             name="BarisGeometri"
             component={Pages.BarisanGeometriPages}
+            options={{
+              headerStyle: {
+                shadowOpacity: 0,
+                elevation: 0,
+              },
+              headerTitle: null,
+              headerShown: null,
+            }}
+          />
+           <Stack.Screen
+            name="BarisGeometriMateri"
+            component={Pages.BarisanGeometriMateriPages}
             options={{
               headerStyle: {
                 shadowOpacity: 0,

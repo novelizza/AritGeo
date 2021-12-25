@@ -3,8 +3,8 @@ import Components from '../components';
 
 const {TemplateComponents} = Components;
 
-function DeretAritmatikaPages() {
+function BarisanGeometriPages() {
   return <TemplateComponents.BarisanGeometriTemplates />;
 }
 
-export default DeretAritmatikaPages;
+export default BarisanGeometriPages;

@@ -24,7 +24,7 @@ export default StyleSheet.create({
     alignSelf: 'center',
   },
   textBawah: {
-    color: Color.BLACK_COLOR,
+    color: Color.GREEN2_COLOR,
     fontSize: 16,
     fontWeight: 'bold',
   },

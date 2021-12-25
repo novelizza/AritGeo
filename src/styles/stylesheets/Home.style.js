@@ -21,13 +21,19 @@ export default StyleSheet.create({
     marginBottom: 15,
   },
   logo: {
-    width: 200,
-    height: 200,
+    width: 170,
+    height: 170,
   },
   ListButton: {
     width: '100%',
     flexDirection: 'row',
     justifyContent: 'center',
+    marginBottom: 20,
+  },
+  ListButton2: {
+    width: '100%',
+    flexDirection: 'row',
+    justifyContent: 'flex-start',
     marginBottom: 20,
   },
   buttonContainer: {

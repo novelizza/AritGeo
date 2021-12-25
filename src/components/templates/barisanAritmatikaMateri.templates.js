@@ -10,7 +10,7 @@ const {BarisanArimatikaStyle} = Styles.Stylesheets;
 
 const {TextAtoms} = Atoms;
 
-function BarisanAritmatikaTemplates() {
+function BarisanAritmatikaMateriTemplates() {
   // const appState = React.useRef(AppState.currentState);
   // const [appStateVisible, setAppStateVisible] = React.useState(
   //   appState.current,
@@ -69,29 +69,47 @@ function BarisanAritmatikaTemplates() {
           styles={BarisanArimatikaStyle.judul}
         />
         <TextAtoms
-          isi="# Barisan Aritmatika #                                      "
+          isi="Tujuan Pembelajaran Barisan Aritmatika adalah"
+          styles={[BarisanArimatikaStyle.descSpesial, {marginHorizontal: 10, marginTop: 10}]}
+        />
+        <TextAtoms
+          isi="1. Siswa dapat mendeksipisikan barisan aritmatika berdasarkan ciri-cirinya."
+          styles={[BarisanArimatikaStyle.descSpesial, {marginHorizontal: 10}]}
+        />
+        <TextAtoms
+          isi="2. Siswa dapat menentukan suku ke-n barisan aritmatika menggunakan n rumus"
+          styles={[BarisanArimatikaStyle.descSpesial, {marginHorizontal: 10}]}
+        />
+        <TextAtoms
+          isi="3. Siswa dapat menentukan jumlah n suku suatu deret aritmatika menggunakan n rumus."
+          styles={[BarisanArimatikaStyle.descSpesial, {marginHorizontal: 10}]}
+        />
+        <TextAtoms
+          isi="Barisan Aritmatika (BA) adalah barisan yang memiliki selisih (beda = b) di suku berurutan yang tetap."
           styles={BarisanArimatikaStyle.desc}
         />
         <View style={BarisanArimatikaStyle.kotakRumus}>
         <TextAtoms
-          isi="b = Uₙ - Uₙ₋₁"
+          isi="b=Uₙ - Uₙ₋₁"
           styles={[BarisanArimatikaStyle.descRumus, {alignSelf: 'center'}]}
         />
         </View>
         <TextAtoms
-          isi="Keterangan :"
+          isi="Contoh Barisan Aritmatika :"
           styles={BarisanArimatikaStyle.desc}
         />
-        <View style={[BarisanArimatikaStyle.descSpesial2Container, {width: '70%', alignSelf: 'center'}]}>
-          <TextAtoms
-            isi="B = beda"
-            styles={BarisanArimatikaStyle.descSpesial}
-          />
-          <TextAtoms
-            isi="Uₙ = Suku ke - n"
-            styles={BarisanArimatikaStyle.descSpesial}
-          />
-        </View>
+        <TextAtoms
+          isi="3, 5, 7, 9, 11, ..."
+          styles={[BarisanArimatikaStyle.desc, {alignSelf: 'center'}]}
+        />
+        <TextAtoms
+          isi="Carilah barisan ke 7"
+          styles={[BarisanArimatikaStyle.descSpesial, {marginLeft: 10, marginTop: 10}]}
+        />
+        <TextAtoms
+          isi="Kita ketahui barisan aritmatika ini menggunakan rumus Uₙ = 2n + 1. Maka baris ke-6 adalah 13 dan baris ke 7 adalah 15."
+          styles={[BarisanArimatikaStyle.descSpesial, {marginHorizontal: 10}]}
+        />
         <TextAtoms
           isi="1. Rumus Suku ke-n"
           styles={BarisanArimatikaStyle.desc}
@@ -128,48 +146,16 @@ function BarisanAritmatikaTemplates() {
           isi="2. Barisan Aritmatika Bertingkat"
           styles={BarisanArimatikaStyle.desc}
         />
-        <View style={BarisanArimatikaStyle.kotakRumus}>
+        <TextAtoms
+          isi="Merupakan Barisan Aritmatika yang masih selisih dua suku berurutannya berubah secata tetap. Rumus suku ke-n : "
+          styles={[BarisanArimatikaStyle.descSpesial, {marginLeft: 10, marginBottom: 5}]}
+        />
+        <View style={BarisanArimatikaStyle.kotakRumus2}>
         <TextAtoms
           isi="Uₙ = an² + bn + c"
           styles={[BarisanArimatikaStyle.descRumus, {alignSelf: 'center'}]}
         />
         </View>
-        <TextAtoms
-          isi="# Deret Aritmatika"
-          styles={BarisanArimatikaStyle.desc}
-        />
-        <View style={BarisanArimatikaStyle.kotakRumus3}>
-        <TextAtoms
-          isi="Sn = ½ n (U₁ + Uₙ) = ½ n (2a + (n-1) b)"
-          styles={[BarisanArimatikaStyle.descRumus, {alignSelf: 'center'}]}
-        />
-        </View>
-        <TextAtoms
-          isi="Keterangan :"
-          styles={BarisanArimatikaStyle.desc}
-        />
-        <View style={BarisanArimatikaStyle.descSpesial3Wrap}>
-            <TextAtoms
-              isi="• Sn = jumlah suku n pertama"
-              styles={BarisanArimatikaStyle.descSpesial}
-            />
-            <TextAtoms
-              isi="• Uₙ = suku ke n"
-              styles={BarisanArimatikaStyle.descSpesial}
-            />
-            <TextAtoms
-              isi="• a = suku ke-1"
-              styles={BarisanArimatikaStyle.descSpesial}
-            />
-            <TextAtoms
-              isi="• b = beda"
-              styles={BarisanArimatikaStyle.descSpesial}
-            />
-            <TextAtoms
-              isi="• n = 1,2,3,4,..."
-              styles={BarisanArimatikaStyle.descSpesial}
-            />
-          </View>
         {/* <TextAtoms
           isi="Contoh Barisan Aritmatika :"
           styles={BarisanArimatikaStyle.desc}
@@ -429,4 +415,4 @@ function BarisanAritmatikaTemplates() {
   );
 }
 
-export default BarisanAritmatikaTemplates;
+export default BarisanAritmatikaMateriTemplates;
