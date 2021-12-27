@@ -45,7 +45,19 @@ function QuestionsTemplate(props) {
   const [appStateVisible, setAppStateVisible] = React.useState(
     appState.current,
   );
-  let sound;
+
+  //let sound;
+
+  let sound = new Sound(
+    require('../../assets/music/solo.mp3'),
+    (error, _sound) => {
+      if (error) {
+        alert('error' + error.message);
+        return;
+      }
+    },
+  );
+
   const dispatch = useDispatch();
   const navigation = useNavigation();
   const data = useSelector(state => state.SoalReducer);
@@ -151,24 +163,30 @@ function QuestionsTemplate(props) {
       sound.stop(() => {
         console.log('Stop');
       });
+       setIsPlay(!isPlay);
+    } 
+    else {
+       sound.play(() => {
+         sound.release();
+      });
+      console.log('Start')
       setIsPlay(!isPlay);
-    } else {
-      sound = new Sound(
-        require('../../assets/music/solo.mp3'),
-        (error, _sound) => {
-          if (error) {
-            alert('error' + error.message);
-            return;
-          }
-          sound.play(() => {
-            sound.release();
-          });
-        },
-      );
-      setIsPlay(!isPlay);
-    }
+      // sound = new Sound(
+      //   require('../../assets/music/solo.mp3'),
+      //   (error, _sound) => {
+      //     if (error) {
+      //       alert('error' + error.message);
+      //       return;
+      //     }
+      //     sound.play(() => {
+      //       sound.release();
+      //     });
+      //   },
+      // );
+      //setIsPlay(!isPlay);
+      //console.log(sound);
+    }  
   }
-
   console.log(sound);
   return (
     <ImageBackground source={bg} resizeMode="cover" style={QuisStyle.bg}>
