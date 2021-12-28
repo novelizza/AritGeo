@@ -19,6 +19,7 @@ import PolaBilanganMateriTemplate from './polaBilanganMateri.templates';
 import BarisanAritmatikaMateriTemplate from './barisanAritmatikaMateri.templates';
 import DeretAritmatikaMateriTemplates from './deretAritmatikaMateri.templates';
 import BarisanGeometriMateriTemplates from './barisanGeometriMateri.templates';
+import RangkumanSatuinTemplate from './rangkumanSatuin.templates';
 
 export default {
   SplashScreenTemplate,
@@ -42,4 +43,5 @@ export default {
   BarisanAritmatikaMateriTemplate,
   DeretAritmatikaMateriTemplates,
   BarisanGeometriMateriTemplates,
+  RangkumanSatuinTemplate
 };

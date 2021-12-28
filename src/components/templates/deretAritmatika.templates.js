@@ -63,7 +63,7 @@ function DeretAritmatikaTemplates() {
       <ScrollView
         style={DeretAritmatikaStyle.container}
         showsVerticalScrollIndicator={false}>
-        <TextAtoms isi="DERET ARITMATIKA" styles={DeretAritmatikaStyle.judul} />
+        <TextAtoms isi="Deret Aritmatika" styles={DeretAritmatikaStyle.judul} />
         <TextAtoms
           isi="Deret aritmatika (DA) yaitu jumlah n suku pertama dari BA."
           styles={DeretAritmatikaStyle.desc}

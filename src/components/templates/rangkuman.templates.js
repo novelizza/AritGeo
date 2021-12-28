@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Image, TouchableOpacity, ImageBackground} from 'react-native';
+import {View, Image, TouchableOpacity, ImageBackground, ScrollView} from 'react-native';
 import Atoms from '../atoms';
 import Styles from '../../styles';
 import Img from '../../assets';
@@ -7,7 +7,7 @@ import {useNavigation} from '@react-navigation/native';
 import Icon from 'react-native-remix-icon';
 import Color from '../../styles/colors';
 
-const {HomeStyle} = Styles.Stylesheets;
+const {HomeStyle, PolaBilanganStyle} = Styles.Stylesheets;
 
 const {TextAtoms} = Atoms;
 
@@ -17,7 +17,7 @@ function RangkumanTemplate() {
   const navigation = useNavigation();
 
   return (
-    <View style={HomeStyle.container}>
+     <View style={HomeStyle.container}>
       <ImageBackground source={bg} resizeMode="cover" style={HomeStyle.bg}>
         <Image style={HomeStyle.logo} source={Logo} />
         <View style={HomeStyle.ListButton}>
@@ -64,7 +64,7 @@ function RangkumanTemplate() {
           <Image style={HomeStyle.logo} source={Mascot} />
         </View>
       </ImageBackground>
-    </View>
+      </View>
   );
 }
 

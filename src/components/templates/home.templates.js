@@ -108,7 +108,7 @@ function HomeTemplate(props) {
           <View style={HomeStyle.buttonContainer}>
             <TouchableOpacity
               style={HomeStyle.button}
-              onPress={() => navigation.navigate('Rangkumanc')}>
+              onPress={() => navigation.navigate('Rangkuman')}>
               <Icon name="book-open-line" size="45" color={Color.CLOUD_COLOR} />
               <TextAtoms isi="RANGKUMAN" styles={HomeStyle.buttonTXT} />
             </TouchableOpacity>

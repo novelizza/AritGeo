@@ -19,6 +19,7 @@ import PolaBilanganMateriPages from './polaBilanganMateri.pages';
 import BarisanAritmatikaMateriPages from './barisanAritmatikaMateri.pages';
 import DeretAritmatikaMateriPages from './deretAritmatikaMateri.pages';
 import BarisanGeometriMateriPages from './barisanGeometriMateri.pages';
+import RangkumanSatuinPages from './rangkumanSatuin.pages';
 
 export default {
   SplashScreenPages,
@@ -42,4 +43,5 @@ export default {
   BarisanAritmatikaMateriPages,
   DeretAritmatikaMateriPages,
   BarisanGeometriMateriPages,
+  RangkumanSatuinPages,
 };

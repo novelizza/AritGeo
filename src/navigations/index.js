@@ -62,7 +62,7 @@ function Navigator() {
           />
            <Stack.Screen
             name="Rangkuman"
-            component={Pages.RangkumanPages}
+            component={Pages.RangkumanSatuinPages}
             options={{
               headerStyle: {
                 shadowOpacity: 0,

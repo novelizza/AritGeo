@@ -52,7 +52,7 @@ function PolaBilanganTemplate() {
   //           sound.release();
   //         });
   //       },
-  //     );
+  //     );a
   //   }
   // }, [appStateVisible]);
 
@@ -64,11 +64,11 @@ function PolaBilanganTemplate() {
       <ScrollView
         style={PolaBilanganStyle.container}
         showsVerticalScrollIndicator={false}>
-        <TextAtoms
+         <TextAtoms
           isi="Pola Bilangan"
           styles={[PolaBilanganStyle.judul, {marginTop: 10}]}
         />
-        {/* <TextAtoms
+        {/*<TextAtoms
           isi="Pola bilangan adalah aturan yang menentukan suatu barisan bilangan. Aturan dinamakan rumus suku ke-n dilambangkan dengan Un."
           styles={PolaBilanganStyle.desc}
         /> */}

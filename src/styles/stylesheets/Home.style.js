@@ -7,10 +7,18 @@ export default StyleSheet.create({
     backgroundColor: Color.THEME_COLOR,
     alignItems: 'center',
   },
+  container2: {
+    flex: 1,
+  },
   bg: {
     flex: 1,
     justifyContent: 'center',
     paddingVertical: 25,
+    alignItems: 'center',
+  },
+  bg2: {
+    flex: 1,
+    justifyContent: 'center',
     alignItems: 'center',
   },
   logoContainer: {
@@ -77,4 +85,9 @@ export default StyleSheet.create({
   mascotSoundContainer: {
     marginVertical: 20,
   },
+  rangkumanBox: {
+    borderWidth: StyleSheet.hairlineWidth,
+    borderColor: Color.GREEN2_COLOR,
+    margin: 3
+  }
 });
