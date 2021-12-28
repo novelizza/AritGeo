@@ -40,28 +40,15 @@ function QuestionsTemplate(props) {
     jawaban3: '',
     jawaban4: '',
   });
-  const [isPlay, setIsPlay] = React.useState(false);
   const appState = React.useRef(AppState.currentState);
   const [appStateVisible, setAppStateVisible] = React.useState(
     appState.current,
   );
-
-  //let sound;
-
-  let sound = new Sound(
-    require('../../assets/music/solo.mp3'),
-    (error, _sound) => {
-      if (error) {
-        alert('error' + error.message);
-        return;
-      }
-    },
-  );
+  const MusicReducer = useSelector(state => state.MusicReducer);
 
   const dispatch = useDispatch();
   const navigation = useNavigation();
   const data = useSelector(state => state.SoalReducer);
-  const MusicReducer = useSelector(state => state.MusicReducer);
 
   React.useEffect(() => {
     setSoal({
@@ -112,82 +99,56 @@ function QuestionsTemplate(props) {
     }
   }, [urut]);
 
-  // React.useEffect(() => {
-  //   const subscription = AppState.addEventListener('change', nextAppState => {
-  //     if (
-  //       appState.current.match(/inactive|background/) &&
-  //       nextAppState === 'active'
-  //     ) {
-  //       console.log('App has come to the foreground!');
-  //     }
+  React.useEffect(() => {
+    const subscription = AppState.addEventListener('change', nextAppState => {
+      if (
+        appState.current.match(/inactive|background/) &&
+        nextAppState === 'active'
+      ) {
+        console.log('App has come to the foreground!');
+      }
 
-  //     appState.current = nextAppState;
-  //     setAppStateVisible(appState.current);
-  //     console.log('AppState', appState.current);
-  //   });
+      appState.current = nextAppState;
+      setAppStateVisible(appState.current);
+      console.log('AppState', appState.current);
+    });
 
-  //   return () => {
-  //     console.log('lalu kesini');
+    return () => {
+      console.log('lalu kesini');
+      dispatch({
+        type: 'STOP_MUSIC2',
+      });
+      subscription.remove();
+    };
+  }, []);
+
+  React.useEffect(() => {
+    if (appStateVisible === 'active') {
+      dispatch({
+        type: 'PLAY_MUSIC2',
+      });
+    }
+    dispatch({
+      type: 'STOP_MUSIC',
+    });
+  }, [appStateVisible]);
+
+  // function playStopMusic() {
+  //   if (isPlay) {
+  //     console.log('disini');
   //     sound.stop(() => {
   //       console.log('Stop');
-  //       dispatch({
-  //         type: 'PLAY_MUSIC',
-  //       });
   //     });
-  //     subscription.remove();
-  //   };
-  // }, []);
-
-  // React.useEffect(() => {
-  //   if (appStateVisible === 'active') {
-  //     sound = new Sound(
-  //       require('../../assets/music/solo.mp3'),
-  //       (error, _sound) => {
-  //         if (error) {
-  //           alert('error' + error.message);
-  //           return;
-  //         }
-  //         sound.play(() => {
-  //           sound.release();
-  //         });
-  //       },
-  //     );
+  //     setIsPlay(!isPlay);
+  //   } else {
+  //     sound.play(() => {
+  //       sound.release();
+  //     });
+  //     console.log('Start');
+  //     setIsPlay(!isPlay);
   //   }
-  //   dispatch({
-  //     type: 'STOP_MUSIC',
-  //   });
-  // }, [appStateVisible]);
-
-  function playStopMusic() {
-    if (isPlay) {
-      sound.stop(() => {
-        console.log('Stop');
-      });
-       setIsPlay(!isPlay);
-    } 
-    else {
-       sound.play(() => {
-         sound.release();
-      });
-      console.log('Start')
-      setIsPlay(!isPlay);
-      // sound = new Sound(
-      //   require('../../assets/music/solo.mp3'),
-      //   (error, _sound) => {
-      //     if (error) {
-      //       alert('error' + error.message);
-      //       return;
-      //     }
-      //     sound.play(() => {
-      //       sound.release();
-      //     });
-      //   },
-      // );
-      //setIsPlay(!isPlay);
-      //console.log(sound);
-    }  
-  }
-  console.log(sound);
+  // }
+  // console.log(sound);
   return (
     <ImageBackground source={bg} resizeMode="cover" style={QuisStyle.bg}>
       <View style={QuisStyle.questionsContainer}>
@@ -306,12 +267,14 @@ function QuestionsTemplate(props) {
           )}
           <TouchableOpacity
             onPress={() => {
-              playStopMusic();
-              isPlay
+              dispatch({
+                type: 'STARTSTOP_MUSIC2',
+              });
+              MusicReducer.isPlay2
                 ? ToastAndroid.show('Sound Tidak Aktif', ToastAndroid.SHORT)
                 : ToastAndroid.show('Sound Aktif', ToastAndroid.SHORT);
             }}>
-            {isPlay ? (
+            {MusicReducer.isPlay2 ? (
               <Icon name="volume-up-fill" size="40" color={Color.CLOUD_COLOR} />
             ) : (
               <Icon
