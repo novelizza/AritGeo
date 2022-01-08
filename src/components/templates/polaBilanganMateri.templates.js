@@ -529,7 +529,7 @@ function PolaBilanganMateriTemplate() {
           
         </View>
         <TextAtoms
-          isi="Berdasarkan Gambar diatas Pola ke-3 adalah..."
+          isi="Berdasarkan Gambar diatas Pola ke-4 adalah..."
           styles={PolaBilanganStyle.desc}
         />
         <View style={PolaBilanganStyle.nodeContainer2}>
@@ -575,7 +575,7 @@ function PolaBilanganMateriTemplate() {
             styles={[PolaBilanganStyle.descSpesial, {marginTop: 10}]}
           />
            <TextAtoms
-            isi="Misalkan variabel a dan b dijumlahkan, kemudian dipangkatkan dari 0 hingga pangkat tiga 3, akan menghasilkan penjabaran seperti berikut."
+            isi="Misalkan variabel a dan b dijumlahkan, kemudian dipangkatkan dari 0 hingga pangkat 3, akan menghasilkan penjabaran seperti berikut."
             styles={[PolaBilanganStyle.descSpesial, {marginTop: 10}]}
           />
         </View>
@@ -700,7 +700,7 @@ function PolaBilanganMateriTemplate() {
             styles={[PolaBilanganStyle.descSpesial, {marginTop: 10}]}
           />
           <TextAtoms
-            isi="Jawab : Aturan atau pola dari barisan bilangan : 1, 3, 5, 7, … secara definisi adalah bilangan ganjil mulai 1 atau bilangan naik yang memiliki selisih 2 yang dimulai dari 1. Sedangkansecara rumus polanya adalah Uₙ = 2n – 1 dengan n dimulai dari 1."
+            isi="Jawab : Aturan atau pola dari barisan bilangan : 1, 3, 5, 7, … secara definisi adalah bilangan ganjil mulai 1 atau bilangan naik yang memiliki selisih 2 yang dimulai dari 1. Sedangkan secara rumus polanya adalah Uₙ = 2n – 1 dengan n dimulai dari 1."
             styles={[PolaBilanganStyle.descSpesial, {marginTop: 10}]}
           />
         </View>

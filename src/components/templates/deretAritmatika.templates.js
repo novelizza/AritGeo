@@ -65,27 +65,42 @@ function DeretAritmatikaTemplates() {
         showsVerticalScrollIndicator={false}>
         <TextAtoms isi="Deret Aritmatika" styles={DeretAritmatikaStyle.judul} />
         <TextAtoms
-          isi="Deret aritmatika (DA) yaitu jumlah n suku pertama dari BA."
+          isi="# Deret Aritmatika #                                      "
           styles={DeretAritmatikaStyle.desc}
         />
-        <TextAtoms
-          isi="BA → U₁ , U₂, U₃, ..., Uₙ"
-          styles={[DeretAritmatikaStyle.descSpesial, {alignSelf: 'center'}]}
-        />
-        <TextAtoms
-          isi="DA → U₁ + U₂ + U₃ + ... + Uₙ"
-          styles={[DeretAritmatikaStyle.descSpesial, {alignSelf: 'center'}]}
-        />
-        <TextAtoms
-          isi="Rumus deret aritmatika :"
-          styles={DeretAritmatikaStyle.desc}
-        />
-        <View style={DeretAritmatikaStyle.kotakRumus2}>
+        <View style={DeretAritmatikaStyle.kotakRumus3}>
         <TextAtoms
           isi="Sn = ½ n (U₁ + Uₙ) = ½ n (2a + (n-1) b)"
           styles={[DeretAritmatikaStyle.descRumus, {alignSelf: 'center'}]}
         />
         </View>
+        
+        <TextAtoms
+          isi="Keterangan :"
+          styles={DeretAritmatikaStyle.desc}
+        />
+        <View style={[DeretAritmatikaStyle.descSpesial3Wrap, {marginBottom: 25, marginLeft: 10}]}>
+            <TextAtoms
+              isi="• Sn = jumlah suku n pertama"
+              styles={DeretAritmatikaStyle.descSpesial}
+            />
+            <TextAtoms
+              isi="• Uₙ = suku ke n"
+              styles={DeretAritmatikaStyle.descSpesial}
+            />
+            <TextAtoms
+              isi="• a = suku ke-1"
+              styles={DeretAritmatikaStyle.descSpesial}
+            />
+            <TextAtoms
+              isi="• b = beda"
+              styles={DeretAritmatikaStyle.descSpesial}
+            />
+            <TextAtoms
+              isi="• n = 1,2,3,4,..."
+              styles={DeretAritmatikaStyle.descSpesial}
+            />
+          </View>
         {/* <TextAtoms isi="Contoh 1 :" styles={DeretAritmatikaStyle.desc} />
         <TextAtoms
           isi="Hitunglah jumlah 50 suku pertama dari BA 5, 9, 13, 17, ..."

@@ -225,7 +225,7 @@ function BarisanGeometriContohSoalTemplates() {
             styles={[BarisanGeometriStyle.descSpesial, {marginTop: 5}]}
           />
           <TextAtoms
-            isi="ar³⁄ₐ = 27"
+            isi="ar³⁄a = 27"
             styles={BarisanGeometriStyle.descSpesial}
           />
           <TextAtoms isi="r³ = 27" styles={BarisanGeometriStyle.descSpesial} />

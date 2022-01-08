@@ -128,48 +128,13 @@ function BarisanAritmatikaTemplates() {
           isi="2. Barisan Aritmatika Bertingkat"
           styles={BarisanArimatikaStyle.desc}
         />
-        <View style={BarisanArimatikaStyle.kotakRumus}>
+        <View style={[BarisanArimatikaStyle.kotakRumus, {marginBottom: 120}]}>
         <TextAtoms
           isi="Uₙ = an² + bn + c"
           styles={[BarisanArimatikaStyle.descRumus, {alignSelf: 'center'}]}
         />
         </View>
-        <TextAtoms
-          isi="# Deret Aritmatika"
-          styles={BarisanArimatikaStyle.desc}
-        />
-        <View style={BarisanArimatikaStyle.kotakRumus3}>
-        <TextAtoms
-          isi="Sn = ½ n (U₁ + Uₙ) = ½ n (2a + (n-1) b)"
-          styles={[BarisanArimatikaStyle.descRumus, {alignSelf: 'center'}]}
-        />
-        </View>
-        <TextAtoms
-          isi="Keterangan :"
-          styles={BarisanArimatikaStyle.desc}
-        />
-        <View style={BarisanArimatikaStyle.descSpesial3Wrap}>
-            <TextAtoms
-              isi="• Sn = jumlah suku n pertama"
-              styles={BarisanArimatikaStyle.descSpesial}
-            />
-            <TextAtoms
-              isi="• Uₙ = suku ke n"
-              styles={BarisanArimatikaStyle.descSpesial}
-            />
-            <TextAtoms
-              isi="• a = suku ke-1"
-              styles={BarisanArimatikaStyle.descSpesial}
-            />
-            <TextAtoms
-              isi="• b = beda"
-              styles={BarisanArimatikaStyle.descSpesial}
-            />
-            <TextAtoms
-              isi="• n = 1,2,3,4,..."
-              styles={BarisanArimatikaStyle.descSpesial}
-            />
-          </View>
+        
         {/* <TextAtoms
           isi="Contoh Barisan Aritmatika :"
           styles={BarisanArimatikaStyle.desc}

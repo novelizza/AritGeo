@@ -40,7 +40,7 @@ function DeretAritmatikaContohSoalTemplates() {
             styles={DeretAritmatikaStyle.descSpesial}
           />
           <TextAtoms
-            isi="S₅₀ = ½ x 50 x (5+210) = 25 x 206"
+            isi="S₅₀ = ½ x 50 x (5+201) = 25 x 206"
             styles={DeretAritmatikaStyle.descSpesial}
           />
           <TextAtoms

@@ -94,12 +94,12 @@ export default StyleSheet.create({
   },
   image:{
     alignSelf: 'center',
-    backgroundColor: Color.GREEN2_COLOR,
+    backgroundColor: Color.WHITE_COLOR,
     borderRadius: 10,
   },
   image2:{
     alignSelf: 'center',
-    backgroundColor: Color.GREEN2_COLOR,
+    backgroundColor: Color.WHITE_COLOR,
     borderRadius: 10,
     width: '90%', 
     alignSelf:'center', 

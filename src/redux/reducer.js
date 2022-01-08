@@ -160,7 +160,7 @@ const initialStateSoal = {
         jawaban4: '3000',
       },
       {
-        soal: '2. Sebuah deret geometri memliki suku pertama a = 2, rasio = 3. Carilah suku U_5(suku ke 5) dan S_5 (jumlah 5 suku pertama)',
+        soal: '2. Sebuah deret geometri memliki suku pertama a = 2, rasio = 3. Carilah suku U₅(suku ke 5) dan S₅ (jumlah 5 suku pertama)',
         jawaban1: 'U₅ = 162 dan S₅  = 242',
         jawaban2: 'U₅ = 158 dan S₅  = 238',
         jawaban3: 'U₅ = 154 dan S₅  = 234',
@@ -174,7 +174,7 @@ const initialStateSoal = {
         jawaban4: '6300',
       },
       {
-        soal: '4. Di dalam sebuah aula, ada 12 baris kursi. Pada barus pertama 10 kursi, bbaris kedua 14 kursi, baris ketiga 18 kursi. Dan seterusnya. Dipojok ruangan terlihat 6 kursi cadangan. Jumlah seluruh kursi didalam aula tersebut adalah…',
+        soal: '4. Di dalam sebuah aula, ada 12 baris kursi. Pada baris pertama 10 kursi, baris kedua 14 kursi, baris ketiga 18 kursi. Dan seterusnya. Dipojok ruangan terlihat 6 kursi cadangan. Jumlah seluruh kursi didalam aula tersebut adalah…',
         jawaban1: '384',
         jawaban2: '390',
         jawaban3: '444',

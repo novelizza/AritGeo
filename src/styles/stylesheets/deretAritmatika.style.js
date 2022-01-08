@@ -70,6 +70,19 @@ export default StyleSheet.create({
     flexDirection: 'row',
     marginBottom: 100,
   },
+  kotakRumus3:{
+    backgroundColor: Color.BLACK_COLOR,
+    width: '90%',
+    alignSelf: 'center',
+    height: '20%',
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: 2,
+    flexDirection: 'row',
+    marginTop: 10,
+    paddingHorizontal: 20,
+    paddingBottom: 5
+  },
   descRumus: {
     fontSize: 18,
     color: Color.WHITE_COLOR,
