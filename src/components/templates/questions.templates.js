@@ -12,7 +12,7 @@ import {useNavigation} from '@react-navigation/native';
 import propTypes from 'prop-types';
 import CheckBox from '@react-native-community/checkbox';
 import {useDispatch, useSelector} from 'react-redux';
-import Sound from 'react-native-sound';
+// import Sound from 'react-native-sound';
 import Icon from 'react-native-remix-icon';
 import Color from '../../styles/colors';
 
@@ -123,32 +123,17 @@ function QuestionsTemplate(props) {
   }, []);
 
   React.useEffect(() => {
-    if (appStateVisible === 'active') {
+    dispatch({
+      type: 'STOP_MUSIC',
+    });
+    console.log('kesini');
+    if (appStateVisible === 'active' && MusicReducer.isPlay2) {
       dispatch({
         type: 'PLAY_MUSIC2',
       });
     }
-    dispatch({
-      type: 'STOP_MUSIC',
-    });
   }, [appStateVisible]);
 
-  // function playStopMusic() {
-  //   if (isPlay) {
-  //     console.log('disini');
-  //     sound.stop(() => {
-  //       console.log('Stop');
-  //     });
-  //     setIsPlay(!isPlay);
-  //   } else {
-  //     sound.play(() => {
-  //       sound.release();
-  //     });
-  //     console.log('Start');
-  //     setIsPlay(!isPlay);
-  //   }
-  // }
-  // console.log(sound);
   return (
     <ImageBackground source={bg} resizeMode="cover" style={QuisStyle.bg}>
       <View style={QuisStyle.questionsContainer}>
