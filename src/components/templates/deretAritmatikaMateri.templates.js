@@ -65,7 +65,7 @@ function DeretAritmatikaMateriTemplates() {
         showsVerticalScrollIndicator={false}>
         <TextAtoms isi="DERET ARITMATIKA" styles={DeretAritmatikaStyle.judul} />
         <TextAtoms
-          isi="Tujuan Pembelajaran deret aritmatika adalah siswa mendiskripsikan deret aritmatika berdasarkan ciri-cirinya."
+          isi="Tujuan Pembelajaran deret aritmatika adalah siswa mendeskripsikan deret aritmatika berdasarkan ciri-cirinya."
           styles={DeretAritmatikaStyle.desc}
         />
         <TextAtoms

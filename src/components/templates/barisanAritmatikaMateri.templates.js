@@ -73,7 +73,7 @@ function BarisanAritmatikaMateriTemplates() {
           styles={[BarisanArimatikaStyle.descSpesial, {marginHorizontal: 10, marginTop: 10}]}
         />
         <TextAtoms
-          isi="1. Siswa dapat mendeksipisikan barisan aritmatika berdasarkan ciri-cirinya."
+          isi="1. Siswa dapat mendeskripsikan barisan aritmatika berdasarkan ciri-cirinya."
           styles={[BarisanArimatikaStyle.descSpesial, {marginHorizontal: 10}]}
         />
         <TextAtoms

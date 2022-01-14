@@ -68,8 +68,8 @@ export default StyleSheet.create({
     color: Color.BLUE_COLOR,
   },
   questionsContainer: {
-    flex: 1,
-    paddingHorizontal: 10,
+    width: '90%',
+    height: '100%',
   },
   questionsAtasTXT: {
     alignSelf: 'center',

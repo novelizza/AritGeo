@@ -69,7 +69,7 @@ function BarisanGeometriMateriTemplates() {
           styles={BarisanGeometriStyle.judul}
         />
         <TextAtoms
-          isi="Tujuan Pembelajaran Barisan Aritmatika adalah"
+          isi="Tujuan Pembelajaran Barisan Geometri adalah"
           styles={[BarisanGeometriStyle.descSpesial, {marginHorizontal: 10, marginTop: 10}]}
         />
         <TextAtoms

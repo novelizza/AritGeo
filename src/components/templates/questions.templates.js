@@ -12,7 +12,6 @@ import {useNavigation} from '@react-navigation/native';
 import propTypes from 'prop-types';
 import CheckBox from '@react-native-community/checkbox';
 import {useDispatch, useSelector} from 'react-redux';
-// import Sound from 'react-native-sound';
 import Icon from 'react-native-remix-icon';
 import Color from '../../styles/colors';
 
